@@ -83,9 +83,11 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Distributed Classes/*.{h,m,c}"
-  s.public_header_files = "include/*.{h}"
-
+  s.source_files  = "Distributed\ Classes/**/*", "include/**/*"
+  s.public_header_files = "include/**/*"
+  
+  s.ios.prefix_header_contents = #define TARGET_OS_MAC 0
+  s.osx.prefix_header_contents = #define TARGET_OS_MAC 1
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -118,15 +120,19 @@ Pod::Spec.new do |s|
   # Most files are non-ARC currently.
   s.requires_arc = false
   
-  arc_files = "Distributed Classes/Server/ClassRepresentation.m",
-    "Distributed Classes/Server/VendedObject.m",
-    "Distributed Classes/Server/MethodProxy.m"
+  arc_files = "Distributed\ Classes/Server/ClassRepresentation.m",
+    "Distributed\ Classes/Server/VendedObject.m",
+    "Distributed\ Classes/Server/MethodProxy.m"
     
   s.exclude_files = arc_files
   
   s.subspec 'arc' do |sna|
         sna.requires_arc = true
-        sna.source_files = arc_files
+        sna.source_files = "Distributed\ Classes/**/*.h", 
+          "Distributed\ Classes/Server/ClassRepresentation.{h,m}",
+          "Distributed\ Classes/Server/VendedObject.{h,m}",
+          "Distributed\ Classes/Server/MethodProxy.{h,m}"
+          
   end
 
 end

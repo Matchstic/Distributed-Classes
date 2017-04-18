@@ -3,6 +3,19 @@ Distributed Classes
 
 Distributed Classes builds upon Distributed Objects to transparently allow multiple processes to share classes as if they were native to each process. These processes need not be running on the same machine, and can scale across networks.
 
+Installation
+===================
+
+You can integrate Distributed Classes into your project in a number of ways:
+
+1. Add via CocoaPods by adding:
+    pod "libGitHubIssues", "~> 0.0.1"
+to your Podfile
+
+2. Copy in an appropriate static library from the Release page.
+
+3. Copy the source code to somewhere in your project, and drag Distributed Classes.xcodeproj into your Xcode project.
+
 Usage
 ===================
 
