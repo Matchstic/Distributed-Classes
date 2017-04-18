@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "DistributedClasses"
   s.version      = "0.0.1"
-  s.summary      = "Allows multiple processes to share classes as if they were native to each process."
+  s.summary      = "Share classes between multiple processes with ease."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
