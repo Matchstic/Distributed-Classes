@@ -1,0 +1,1088 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9192CD71E8436B80057A7AB /* DCNSCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C9192CD61E8436B80057A7AB /* DCNSCrypto.h */; };
+		C9192CEC1E8456F90057A7AB /* chacha20.c in Sources */ = {isa = PBXBuildFile; fileRef = C9192CE71E8456F90057A7AB /* chacha20.c */; };
+		C9192CED1E8456F90057A7AB /* chacha20.c in Sources */ = {isa = PBXBuildFile; fileRef = C9192CE71E8456F90057A7AB /* chacha20.c */; };
+		C9192CEE1E8456F90057A7AB /* chacha20.c in Sources */ = {isa = PBXBuildFile; fileRef = C9192CE71E8456F90057A7AB /* chacha20.c */; };
+		C9192CEF1E8456F90057A7AB /* chacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = C9192CE81E8456F90057A7AB /* chacha20.h */; };
+		C9192CF01E8456F90057A7AB /* ecrypt-config.h in Headers */ = {isa = PBXBuildFile; fileRef = C9192CE91E8456F90057A7AB /* ecrypt-config.h */; };
+		C9192CF11E8456F90057A7AB /* ecrypt-machine.h in Headers */ = {isa = PBXBuildFile; fileRef = C9192CEA1E8456F90057A7AB /* ecrypt-machine.h */; };
+		C9192CF21E8456F90057A7AB /* ecrypt-portable.h in Headers */ = {isa = PBXBuildFile; fileRef = C9192CEB1E8456F90057A7AB /* ecrypt-portable.h */; };
+		C92AD1401E72EC0F0092FB38 /* DCNSClient.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1171E72EC0F0092FB38 /* DCNSClient.h */; };
+		C92AD1411E72EC0F0092FB38 /* DCNSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1181E72EC0F0092FB38 /* DCNSClient.m */; };
+		C92AD1421E72EC0F0092FB38 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1191E72EC0F0092FB38 /* fishhook.c */; };
+		C92AD1431E72EC0F0092FB38 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD11A1E72EC0F0092FB38 /* fishhook.h */; };
+		C92AD1461E72EC0F0092FB38 /* DCNSBasicAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD11F1E72EC0F0092FB38 /* DCNSBasicAuthentication.h */; };
+		C92AD1471E72EC0F0092FB38 /* DCNSBasicAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1201E72EC0F0092FB38 /* DCNSBasicAuthentication.m */; };
+		C92AD1481E72EC0F0092FB38 /* DCNSConnection-Delegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1211E72EC0F0092FB38 /* DCNSConnection-Delegate.h */; };
+		C92AD1491E72EC0F0092FB38 /* DCNSConnection-NSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1221E72EC0F0092FB38 /* DCNSConnection-NSPrivate.h */; };
+		C92AD14A1E72EC0F0092FB38 /* DCNSConnection-NSUndocumented.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1231E72EC0F0092FB38 /* DCNSConnection-NSUndocumented.h */; };
+		C92AD14B1E72EC0F0092FB38 /* DCNSConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1241E72EC0F0092FB38 /* DCNSConnection.h */; };
+		C92AD14C1E72EC0F0092FB38 /* DCNSConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1251E72EC0F0092FB38 /* DCNSConnection.m */; };
+		C92AD14D1E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1261E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.h */; };
+		C92AD14E1E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1271E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.m */; };
+		C92AD14F1E72EC0F0092FB38 /* DCNSDistantObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1281E72EC0F0092FB38 /* DCNSDistantObject.h */; };
+		C92AD1501E72EC0F0092FB38 /* DCNSDistantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1291E72EC0F0092FB38 /* DCNSDistantObject.m */; };
+		C92AD1511E72EC0F0092FB38 /* DCNSDistantObjectRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD12A1E72EC0F0092FB38 /* DCNSDistantObjectRequest.h */; };
+		C92AD1521E72EC0F0092FB38 /* DCNSPortCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD12B1E72EC0F0092FB38 /* DCNSPortCoder.h */; };
+		C92AD1531E72EC0F0092FB38 /* DCNSPortCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD12C1E72EC0F0092FB38 /* DCNSPortCoder.m */; };
+		C92AD1541E72EC0F0092FB38 /* DCNSPortNameServer.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD12D1E72EC0F0092FB38 /* DCNSPortNameServer.h */; };
+		C92AD1551E72EC0F0092FB38 /* DCNSPortNameServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD12E1E72EC0F0092FB38 /* DCNSPortNameServer.m */; };
+		C92AD1561E72EC0F0092FB38 /* DCNSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD12F1E72EC0F0092FB38 /* DCNSPrivate.h */; };
+		C92AD1571E72EC0F0092FB38 /* DCNSRaise.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1301E72EC0F0092FB38 /* DCNSRaise.h */; };
+		C92AD1581E72EC0F0092FB38 /* DCNSSocketPort.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1311E72EC0F0092FB38 /* DCNSSocketPort.h */; };
+		C92AD1591E72EC0F0092FB38 /* DCNSSocketPort.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1321E72EC0F0092FB38 /* DCNSSocketPort.m */; };
+		C92AD15F1E72EC0F0092FB38 /* ClassRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1391E72EC0F0092FB38 /* ClassRepresentation.h */; };
+		C92AD1601E72EC0F0092FB38 /* ClassRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13A1E72EC0F0092FB38 /* ClassRepresentation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C92AD1611E72EC0F0092FB38 /* MethodProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD13B1E72EC0F0092FB38 /* MethodProxy.h */; };
+		C92AD1621E72EC0F0092FB38 /* MethodProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13C1E72EC0F0092FB38 /* MethodProxy.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C92AD1641E72EC0F0092FB38 /* VendedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD13E1E72EC0F0092FB38 /* VendedObject.h */; };
+		C92AD1651E72EC0F0092FB38 /* VendedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13F1E72EC0F0092FB38 /* VendedObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C92AD2341E73004B0092FB38 /* DCNSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1181E72EC0F0092FB38 /* DCNSClient.m */; };
+		C92AD2351E73004F0092FB38 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1191E72EC0F0092FB38 /* fishhook.c */; };
+		C92AD2371E7300520092FB38 /* DCNSBasicAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1201E72EC0F0092FB38 /* DCNSBasicAuthentication.m */; };
+		C92AD2381E7300570092FB38 /* DCNSConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1251E72EC0F0092FB38 /* DCNSConnection.m */; };
+		C92AD2391E7300590092FB38 /* DCNSDiffieHellmanUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1271E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.m */; };
+		C92AD23A1E73005B0092FB38 /* DCNSDistantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1291E72EC0F0092FB38 /* DCNSDistantObject.m */; };
+		C92AD23B1E73005D0092FB38 /* DCNSPortCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD12C1E72EC0F0092FB38 /* DCNSPortCoder.m */; };
+		C92AD23C1E7300600092FB38 /* DCNSPortNameServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD12E1E72EC0F0092FB38 /* DCNSPortNameServer.m */; };
+		C92AD23D1E7300640092FB38 /* DCNSSocketPort.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1321E72EC0F0092FB38 /* DCNSSocketPort.m */; };
+		C92AD24B1E7300B30092FB38 /* DCNSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1181E72EC0F0092FB38 /* DCNSClient.m */; };
+		C92AD24C1E7300B50092FB38 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1191E72EC0F0092FB38 /* fishhook.c */; };
+		C92AD24E1E7300B80092FB38 /* DCNSBasicAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1201E72EC0F0092FB38 /* DCNSBasicAuthentication.m */; };
+		C92AD24F1E7300BC0092FB38 /* DCNSConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1251E72EC0F0092FB38 /* DCNSConnection.m */; };
+		C92AD2501E7300BD0092FB38 /* DCNSDiffieHellmanUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1271E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.m */; };
+		C92AD2511E7300BF0092FB38 /* DCNSDistantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1291E72EC0F0092FB38 /* DCNSDistantObject.m */; };
+		C92AD2521E7300C20092FB38 /* DCNSPortCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD12C1E72EC0F0092FB38 /* DCNSPortCoder.m */; };
+		C92AD2531E7300C30092FB38 /* DCNSPortNameServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD12E1E72EC0F0092FB38 /* DCNSPortNameServer.m */; };
+		C92AD2541E7300C60092FB38 /* DCNSSocketPort.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1321E72EC0F0092FB38 /* DCNSSocketPort.m */; };
+		C92AD2551E7300DD0092FB38 /* ClassRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13A1E72EC0F0092FB38 /* ClassRepresentation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C92AD2561E7300DF0092FB38 /* MethodProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13C1E72EC0F0092FB38 /* MethodProxy.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C92AD2571E7300E30092FB38 /* VendedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13F1E72EC0F0092FB38 /* VendedObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C92AD2591E7300F10092FB38 /* ClassRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13A1E72EC0F0092FB38 /* ClassRepresentation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C92AD25A1E7300F30092FB38 /* MethodProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13C1E72EC0F0092FB38 /* MethodProxy.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C92AD25C1E7300F90092FB38 /* VendedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13F1E72EC0F0092FB38 /* VendedObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C92AD2721E7303230092FB38 /* DCNSServer.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD2701E7303230092FB38 /* DCNSServer.h */; };
+		C92AD2731E7303230092FB38 /* DCNSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD2711E7303230092FB38 /* DCNSServer.m */; };
+		C92AD2741E7303230092FB38 /* DCNSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD2711E7303230092FB38 /* DCNSServer.m */; };
+		C92AD2751E7303230092FB38 /* DCNSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD2711E7303230092FB38 /* DCNSServer.m */; };
+		C963D1B71E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */; };
+		C963D1B81E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */; };
+		C963D1B91E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */; };
+		C963D1C01E8186F20085BFAA /* NSHashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BB1E8186F20085BFAA /* NSHashTable.h */; };
+		C963D1C11E8186F20085BFAA /* NSHost.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BC1E8186F20085BFAA /* NSHost.h */; };
+		C963D1C21E8186F20085BFAA /* NSMapTable.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BD1E8186F20085BFAA /* NSMapTable.h */; };
+		C963D1C31E8186F20085BFAA /* NSPortMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BE1E8186F20085BFAA /* NSPortMessage.h */; };
+		C963D1C41E8186F20085BFAA /* NSPortNameServer.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BF1E8186F20085BFAA /* NSPortNameServer.h */; };
+		C9825BB81E8938A100027655 /* poly1305-donna-16.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825BAF1E8938A100027655 /* poly1305-donna-16.h */; };
+		C9825BB91E8938A100027655 /* poly1305-donna-32.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825BB01E8938A100027655 /* poly1305-donna-32.h */; };
+		C9825BBA1E8938A100027655 /* poly1305-donna-64.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825BB11E8938A100027655 /* poly1305-donna-64.h */; };
+		C9825BBB1E8938A100027655 /* poly1305-donna-8.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825BB21E8938A100027655 /* poly1305-donna-8.h */; };
+		C9825BBC1E8938A100027655 /* poly1305-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = C9825BB31E8938A100027655 /* poly1305-donna.c */; };
+		C9825BBD1E8938A100027655 /* poly1305-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = C9825BB31E8938A100027655 /* poly1305-donna.c */; };
+		C9825BBE1E8938A100027655 /* poly1305-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = C9825BB31E8938A100027655 /* poly1305-donna.c */; };
+		C9825BBF1E8938A100027655 /* poly1305-donna.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825BB41E8938A100027655 /* poly1305-donna.h */; };
+		C9A1ECA61E805EB60085F17D /* DCNSAbstractError.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A1ECA41E805EB60085F17D /* DCNSAbstractError.h */; };
+		C9A1ECA71E805EB60085F17D /* DCNSAbstractError.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A1ECA51E805EB60085F17D /* DCNSAbstractError.m */; };
+		C9A1ECA81E805EB60085F17D /* DCNSAbstractError.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A1ECA51E805EB60085F17D /* DCNSAbstractError.m */; };
+		C9A1ECA91E805EB60085F17D /* DCNSAbstractError.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A1ECA51E805EB60085F17D /* DCNSAbstractError.m */; };
+		C9A3DE331E858B1A005E49DF /* DCAES128.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A3DE2D1E858B1A005E49DF /* DCAES128.h */; };
+		C9A3DE341E858B1A005E49DF /* DCAES128.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE2E1E858B1A005E49DF /* DCAES128.m */; };
+		C9A3DE351E858B1A005E49DF /* DCAES128.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE2E1E858B1A005E49DF /* DCAES128.m */; };
+		C9A3DE361E858B1A005E49DF /* DCAES128.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE2E1E858B1A005E49DF /* DCAES128.m */; };
+		C9A3DE371E858B1A005E49DF /* DCChaCha.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A3DE2F1E858B1A005E49DF /* DCChaCha.h */; };
+		C9A3DE381E858B1A005E49DF /* DCChaCha.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE301E858B1A005E49DF /* DCChaCha.m */; };
+		C9A3DE391E858B1A005E49DF /* DCChaCha.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE301E858B1A005E49DF /* DCChaCha.m */; };
+		C9A3DE3A1E858B1A005E49DF /* DCChaCha.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE301E858B1A005E49DF /* DCChaCha.m */; };
+		C9A3DE3B1E858B1A005E49DF /* DCCryptoPassthrough.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A3DE311E858B1A005E49DF /* DCCryptoPassthrough.h */; };
+		C9A3DE3C1E858B1A005E49DF /* DCCryptoPassthrough.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE321E858B1A005E49DF /* DCCryptoPassthrough.m */; };
+		C9A3DE3D1E858B1A005E49DF /* DCCryptoPassthrough.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE321E858B1A005E49DF /* DCCryptoPassthrough.m */; };
+		C9A3DE3E1E858B1A005E49DF /* DCCryptoPassthrough.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE321E858B1A005E49DF /* DCCryptoPassthrough.m */; };
+		C9A3DE411E858C19005E49DF /* DCXOR.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A3DE3F1E858C19005E49DF /* DCXOR.h */; };
+		C9A3DE421E858C19005E49DF /* DCXOR.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE401E858C19005E49DF /* DCXOR.m */; };
+		C9A3DE431E858C19005E49DF /* DCXOR.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE401E858C19005E49DF /* DCXOR.m */; };
+		C9A3DE441E858C19005E49DF /* DCXOR.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE401E858C19005E49DF /* DCXOR.m */; };
+		C9A3DE491E85913F005E49DF /* DCSHA256.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A3DE471E85913F005E49DF /* DCSHA256.h */; };
+		C9A3DE4A1E85913F005E49DF /* DCSHA256.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE481E85913F005E49DF /* DCSHA256.m */; };
+		C9A3DE4B1E85913F005E49DF /* DCSHA256.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE481E85913F005E49DF /* DCSHA256.m */; };
+		C9A3DE4C1E85913F005E49DF /* DCSHA256.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE481E85913F005E49DF /* DCSHA256.m */; };
+		C9A3DE521E859231005E49DF /* check_config.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A3DE4E1E859231005E49DF /* check_config.h */; };
+		C9A3DE531E859231005E49DF /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A3DE4F1E859231005E49DF /* config.h */; };
+		C9A3DE541E859231005E49DF /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE501E859231005E49DF /* sha256.c */; };
+		C9A3DE551E859231005E49DF /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE501E859231005E49DF /* sha256.c */; };
+		C9A3DE561E859231005E49DF /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = C9A3DE501E859231005E49DF /* sha256.c */; };
+		C9A3DE571E859231005E49DF /* sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A3DE511E859231005E49DF /* sha256.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C92AD2291E7300020092FB38 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92AD2401E7300A10092FB38 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C9192CD61E8436B80057A7AB /* DCNSCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSCrypto.h; sourceTree = "<group>"; };
+		C9192CE71E8456F90057A7AB /* chacha20.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chacha20.c; sourceTree = "<group>"; };
+		C9192CE81E8456F90057A7AB /* chacha20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chacha20.h; sourceTree = "<group>"; };
+		C9192CE91E8456F90057A7AB /* ecrypt-config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ecrypt-config.h"; sourceTree = "<group>"; };
+		C9192CEA1E8456F90057A7AB /* ecrypt-machine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ecrypt-machine.h"; sourceTree = "<group>"; };
+		C9192CEB1E8456F90057A7AB /* ecrypt-portable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ecrypt-portable.h"; sourceTree = "<group>"; };
+		C92AD10C1E72EBAD0092FB38 /* libDistributedClassesmacOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDistributedClassesmacOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92AD1171E72EC0F0092FB38 /* DCNSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSClient.h; sourceTree = "<group>"; };
+		C92AD1181E72EC0F0092FB38 /* DCNSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSClient.m; sourceTree = "<group>"; };
+		C92AD1191E72EC0F0092FB38 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		C92AD11A1E72EC0F0092FB38 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		C92AD11B1E72EC0F0092FB38 /* ReplacedMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplacedMethods.m; sourceTree = "<group>"; };
+		C92AD11F1E72EC0F0092FB38 /* DCNSBasicAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSBasicAuthentication.h; sourceTree = "<group>"; };
+		C92AD1201E72EC0F0092FB38 /* DCNSBasicAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSBasicAuthentication.m; sourceTree = "<group>"; };
+		C92AD1211E72EC0F0092FB38 /* DCNSConnection-Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DCNSConnection-Delegate.h"; sourceTree = "<group>"; };
+		C92AD1221E72EC0F0092FB38 /* DCNSConnection-NSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DCNSConnection-NSPrivate.h"; sourceTree = "<group>"; };
+		C92AD1231E72EC0F0092FB38 /* DCNSConnection-NSUndocumented.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DCNSConnection-NSUndocumented.h"; sourceTree = "<group>"; };
+		C92AD1241E72EC0F0092FB38 /* DCNSConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSConnection.h; sourceTree = "<group>"; };
+		C92AD1251E72EC0F0092FB38 /* DCNSConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSConnection.m; sourceTree = "<group>"; };
+		C92AD1261E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSDiffieHellmanUtility.h; sourceTree = "<group>"; };
+		C92AD1271E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSDiffieHellmanUtility.m; sourceTree = "<group>"; };
+		C92AD1281E72EC0F0092FB38 /* DCNSDistantObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSDistantObject.h; sourceTree = "<group>"; };
+		C92AD1291E72EC0F0092FB38 /* DCNSDistantObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSDistantObject.m; sourceTree = "<group>"; };
+		C92AD12A1E72EC0F0092FB38 /* DCNSDistantObjectRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSDistantObjectRequest.h; sourceTree = "<group>"; };
+		C92AD12B1E72EC0F0092FB38 /* DCNSPortCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSPortCoder.h; sourceTree = "<group>"; };
+		C92AD12C1E72EC0F0092FB38 /* DCNSPortCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSPortCoder.m; sourceTree = "<group>"; };
+		C92AD12D1E72EC0F0092FB38 /* DCNSPortNameServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSPortNameServer.h; sourceTree = "<group>"; };
+		C92AD12E1E72EC0F0092FB38 /* DCNSPortNameServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSPortNameServer.m; sourceTree = "<group>"; };
+		C92AD12F1E72EC0F0092FB38 /* DCNSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCNSPrivate.h; path = "Distributed Objects/DCNSPrivate.h"; sourceTree = "<group>"; };
+		C92AD1301E72EC0F0092FB38 /* DCNSRaise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCNSRaise.h; path = ../DCNSRaise.h; sourceTree = "<group>"; };
+		C92AD1311E72EC0F0092FB38 /* DCNSSocketPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSSocketPort.h; sourceTree = "<group>"; };
+		C92AD1321E72EC0F0092FB38 /* DCNSSocketPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSSocketPort.m; sourceTree = "<group>"; };
+		C92AD1391E72EC0F0092FB38 /* ClassRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassRepresentation.h; sourceTree = "<group>"; };
+		C92AD13A1E72EC0F0092FB38 /* ClassRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassRepresentation.m; sourceTree = "<group>"; };
+		C92AD13B1E72EC0F0092FB38 /* MethodProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodProxy.h; sourceTree = "<group>"; };
+		C92AD13C1E72EC0F0092FB38 /* MethodProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodProxy.m; sourceTree = "<group>"; };
+		C92AD13D1E72EC0F0092FB38 /* ServerRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerRegistration.m; sourceTree = "<group>"; };
+		C92AD13E1E72EC0F0092FB38 /* VendedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendedObject.h; sourceTree = "<group>"; };
+		C92AD13F1E72EC0F0092FB38 /* VendedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VendedObject.m; sourceTree = "<group>"; };
+		C92AD22B1E7300020092FB38 /* libDistributedClassesiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDistributedClassesiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92AD2421E7300A10092FB38 /* libDistributedClassestvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDistributedClassestvOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92AD2701E7303230092FB38 /* DCNSServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSServer.h; sourceTree = "<group>"; };
+		C92AD2711E7303230092FB38 /* DCNSServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSServer.m; sourceTree = "<group>"; };
+		C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSDistantObjectRequest.m; sourceTree = "<group>"; };
+		C963D1BB1E8186F20085BFAA /* NSHashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHashTable.h; sourceTree = "<group>"; };
+		C963D1BC1E8186F20085BFAA /* NSHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHost.h; sourceTree = "<group>"; };
+		C963D1BD1E8186F20085BFAA /* NSMapTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMapTable.h; sourceTree = "<group>"; };
+		C963D1BE1E8186F20085BFAA /* NSPortMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPortMessage.h; sourceTree = "<group>"; };
+		C963D1BF1E8186F20085BFAA /* NSPortNameServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPortNameServer.h; sourceTree = "<group>"; };
+		C963D1CA1E8198420085BFAA /* DCNSAbstractError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSAbstractError.h; sourceTree = "<group>"; };
+		C9825BAF1E8938A100027655 /* poly1305-donna-16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna-16.h"; sourceTree = "<group>"; };
+		C9825BB01E8938A100027655 /* poly1305-donna-32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna-32.h"; sourceTree = "<group>"; };
+		C9825BB11E8938A100027655 /* poly1305-donna-64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna-64.h"; sourceTree = "<group>"; };
+		C9825BB21E8938A100027655 /* poly1305-donna-8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna-8.h"; sourceTree = "<group>"; };
+		C9825BB31E8938A100027655 /* poly1305-donna.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "poly1305-donna.c"; sourceTree = "<group>"; };
+		C9825BB41E8938A100027655 /* poly1305-donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna.h"; sourceTree = "<group>"; };
+		C9A1ECA41E805EB60085F17D /* DCNSAbstractError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCNSAbstractError.h; path = "Error Handling/DCNSAbstractError.h"; sourceTree = "<group>"; };
+		C9A1ECA51E805EB60085F17D /* DCNSAbstractError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCNSAbstractError.m; path = "Error Handling/DCNSAbstractError.m"; sourceTree = "<group>"; };
+		C9A3DE2D1E858B1A005E49DF /* DCAES128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAES128.h; sourceTree = "<group>"; };
+		C9A3DE2E1E858B1A005E49DF /* DCAES128.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAES128.m; sourceTree = "<group>"; };
+		C9A3DE2F1E858B1A005E49DF /* DCChaCha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCChaCha.h; sourceTree = "<group>"; };
+		C9A3DE301E858B1A005E49DF /* DCChaCha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCChaCha.m; sourceTree = "<group>"; };
+		C9A3DE311E858B1A005E49DF /* DCCryptoPassthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCryptoPassthrough.h; sourceTree = "<group>"; };
+		C9A3DE321E858B1A005E49DF /* DCCryptoPassthrough.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCryptoPassthrough.m; sourceTree = "<group>"; };
+		C9A3DE3F1E858C19005E49DF /* DCXOR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCXOR.h; sourceTree = "<group>"; };
+		C9A3DE401E858C19005E49DF /* DCXOR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCXOR.m; sourceTree = "<group>"; };
+		C9A3DE471E85913F005E49DF /* DCSHA256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCSHA256.h; sourceTree = "<group>"; };
+		C9A3DE481E85913F005E49DF /* DCSHA256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCSHA256.m; sourceTree = "<group>"; };
+		C9A3DE4E1E859231005E49DF /* check_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = check_config.h; sourceTree = "<group>"; };
+		C9A3DE4F1E859231005E49DF /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		C9A3DE501E859231005E49DF /* sha256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256.c; sourceTree = "<group>"; };
+		C9A3DE511E859231005E49DF /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha256.h; sourceTree = "<group>"; };
+		C9BC80B01E7322D400D28430 /* DCNSClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSClient.h; sourceTree = "<group>"; };
+		C9BC80B11E7322D400D28430 /* DistributedClasses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistributedClasses.h; sourceTree = "<group>"; };
+		C9BC80B31E7322D400D28430 /* DCNSBasicAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSBasicAuthentication.h; sourceTree = "<group>"; };
+		C9BC80B41E7322D400D28430 /* DCNSConnection-Delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCNSConnection-Delegate.h"; sourceTree = "<group>"; };
+		C9BC80B61E7322D400D28430 /* DCNSServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSServer.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C92AD1091E72EBAD0092FB38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92AD2281E7300020092FB38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92AD23F1E7300A10092FB38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9192CE61E8456F90057A7AB /* chacha */ = {
+			isa = PBXGroup;
+			children = (
+				C9192CE71E8456F90057A7AB /* chacha20.c */,
+				C9192CE81E8456F90057A7AB /* chacha20.h */,
+				C9192CE91E8456F90057A7AB /* ecrypt-config.h */,
+				C9192CEA1E8456F90057A7AB /* ecrypt-machine.h */,
+				C9192CEB1E8456F90057A7AB /* ecrypt-portable.h */,
+			);
+			path = chacha;
+			sourceTree = "<group>";
+		};
+		C92AD1011E72EB7F0092FB38 = {
+			isa = PBXGroup;
+			children = (
+				C92AD10E1E72EBAD0092FB38 /* Distributed Classes */,
+				C92AD10D1E72EBAD0092FB38 /* Products */,
+				C9BC80AE1E7322D400D28430 /* include */,
+			);
+			sourceTree = "<group>";
+		};
+		C92AD10D1E72EBAD0092FB38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD10C1E72EBAD0092FB38 /* libDistributedClassesmacOS.a */,
+				C92AD22B1E7300020092FB38 /* libDistributedClassesiOS.a */,
+				C92AD2421E7300A10092FB38 /* libDistributedClassestvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C92AD10E1E72EBAD0092FB38 /* Distributed Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD11E1E72EC0F0092FB38 /* Distributed Objects */,
+				C92AD1161E72EC0F0092FB38 /* Client */,
+				C92AD1381E72EC0F0092FB38 /* Server */,
+				C963D1C51E8187380085BFAA /* Security */,
+				C963D1C61E8187770085BFAA /* Sockets */,
+				C9A1ECAA1E805EBC0085F17D /* Error Handling */,
+				C92AD12F1E72EC0F0092FB38 /* DCNSPrivate.h */,
+			);
+			path = "Distributed Classes";
+			sourceTree = "<group>";
+		};
+		C92AD1161E72EC0F0092FB38 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD1171E72EC0F0092FB38 /* DCNSClient.h */,
+				C92AD1181E72EC0F0092FB38 /* DCNSClient.m */,
+				C92AD11B1E72EC0F0092FB38 /* ReplacedMethods.m */,
+				C963D1CD1E8199F50085BFAA /* fishhook */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		C92AD11C1E72EC0F0092FB38 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				C9A3DE2D1E858B1A005E49DF /* DCAES128.h */,
+				C9A3DE2E1E858B1A005E49DF /* DCAES128.m */,
+				C9A3DE2F1E858B1A005E49DF /* DCChaCha.h */,
+				C9A3DE301E858B1A005E49DF /* DCChaCha.m */,
+				C9A3DE3F1E858C19005E49DF /* DCXOR.h */,
+				C9A3DE401E858C19005E49DF /* DCXOR.m */,
+				C9A3DE471E85913F005E49DF /* DCSHA256.h */,
+				C9A3DE481E85913F005E49DF /* DCSHA256.m */,
+				C9A3DE311E858B1A005E49DF /* DCCryptoPassthrough.h */,
+				C9A3DE321E858B1A005E49DF /* DCCryptoPassthrough.m */,
+				C9825BAD1E8938A100027655 /* poly1305-donna */,
+				C9A3DE4D1E859231005E49DF /* sha256 */,
+				C9192CE61E8456F90057A7AB /* chacha */,
+				C9192CD61E8436B80057A7AB /* DCNSCrypto.h */,
+			);
+			name = Crypto;
+			path = ../Crypto;
+			sourceTree = "<group>";
+		};
+		C92AD11E1E72EC0F0092FB38 /* Distributed Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C963D1C81E81878A0085BFAA /* Connection */,
+				C963D1C71E81877D0085BFAA /* Message Coding */,
+				C963D1BA1E8186F20085BFAA /* Compatibility Headers */,
+			);
+			path = "Distributed Objects";
+			sourceTree = "<group>";
+		};
+		C92AD1381E72EC0F0092FB38 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD2701E7303230092FB38 /* DCNSServer.h */,
+				C92AD2711E7303230092FB38 /* DCNSServer.m */,
+				C92AD13D1E72EC0F0092FB38 /* ServerRegistration.m */,
+				C963D1CC1E8199E40085BFAA /* Proxied Objects */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		C963D1BA1E8186F20085BFAA /* Compatibility Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD1301E72EC0F0092FB38 /* DCNSRaise.h */,
+				C963D1BB1E8186F20085BFAA /* NSHashTable.h */,
+				C963D1BC1E8186F20085BFAA /* NSHost.h */,
+				C963D1BD1E8186F20085BFAA /* NSMapTable.h */,
+				C963D1BE1E8186F20085BFAA /* NSPortMessage.h */,
+				C963D1BF1E8186F20085BFAA /* NSPortNameServer.h */,
+			);
+			path = "Compatibility Headers";
+			sourceTree = "<group>";
+		};
+		C963D1C51E8187380085BFAA /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD11C1E72EC0F0092FB38 /* Crypto */,
+				C92AD11F1E72EC0F0092FB38 /* DCNSBasicAuthentication.h */,
+				C92AD1201E72EC0F0092FB38 /* DCNSBasicAuthentication.m */,
+				C92AD1261E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.h */,
+				C92AD1271E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.m */,
+			);
+			name = Security;
+			path = "Distributed Objects";
+			sourceTree = "<group>";
+		};
+		C963D1C61E8187770085BFAA /* Sockets */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD12D1E72EC0F0092FB38 /* DCNSPortNameServer.h */,
+				C92AD12E1E72EC0F0092FB38 /* DCNSPortNameServer.m */,
+				C92AD1311E72EC0F0092FB38 /* DCNSSocketPort.h */,
+				C92AD1321E72EC0F0092FB38 /* DCNSSocketPort.m */,
+			);
+			name = Sockets;
+			path = "Distributed Objects";
+			sourceTree = "<group>";
+		};
+		C963D1C71E81877D0085BFAA /* Message Coding */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD12B1E72EC0F0092FB38 /* DCNSPortCoder.h */,
+				C92AD12C1E72EC0F0092FB38 /* DCNSPortCoder.m */,
+			);
+			name = "Message Coding";
+			sourceTree = "<group>";
+		};
+		C963D1C81E81878A0085BFAA /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD1211E72EC0F0092FB38 /* DCNSConnection-Delegate.h */,
+				C92AD1221E72EC0F0092FB38 /* DCNSConnection-NSPrivate.h */,
+				C92AD1231E72EC0F0092FB38 /* DCNSConnection-NSUndocumented.h */,
+				C92AD1241E72EC0F0092FB38 /* DCNSConnection.h */,
+				C92AD1251E72EC0F0092FB38 /* DCNSConnection.m */,
+				C92AD1281E72EC0F0092FB38 /* DCNSDistantObject.h */,
+				C92AD1291E72EC0F0092FB38 /* DCNSDistantObject.m */,
+				C92AD12A1E72EC0F0092FB38 /* DCNSDistantObjectRequest.h */,
+				C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		C963D1CC1E8199E40085BFAA /* Proxied Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD1391E72EC0F0092FB38 /* ClassRepresentation.h */,
+				C92AD13A1E72EC0F0092FB38 /* ClassRepresentation.m */,
+				C92AD13B1E72EC0F0092FB38 /* MethodProxy.h */,
+				C92AD13C1E72EC0F0092FB38 /* MethodProxy.m */,
+				C92AD13E1E72EC0F0092FB38 /* VendedObject.h */,
+				C92AD13F1E72EC0F0092FB38 /* VendedObject.m */,
+			);
+			name = "Proxied Objects";
+			sourceTree = "<group>";
+		};
+		C963D1CD1E8199F50085BFAA /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				C92AD1191E72EC0F0092FB38 /* fishhook.c */,
+				C92AD11A1E72EC0F0092FB38 /* fishhook.h */,
+			);
+			name = fishhook;
+			sourceTree = "<group>";
+		};
+		C9825BAD1E8938A100027655 /* poly1305-donna */ = {
+			isa = PBXGroup;
+			children = (
+				C9825BAF1E8938A100027655 /* poly1305-donna-16.h */,
+				C9825BB01E8938A100027655 /* poly1305-donna-32.h */,
+				C9825BB11E8938A100027655 /* poly1305-donna-64.h */,
+				C9825BB21E8938A100027655 /* poly1305-donna-8.h */,
+				C9825BB31E8938A100027655 /* poly1305-donna.c */,
+				C9825BB41E8938A100027655 /* poly1305-donna.h */,
+			);
+			path = "poly1305-donna";
+			sourceTree = "<group>";
+		};
+		C9A1ECAA1E805EBC0085F17D /* Error Handling */ = {
+			isa = PBXGroup;
+			children = (
+				C9A1ECA41E805EB60085F17D /* DCNSAbstractError.h */,
+				C9A1ECA51E805EB60085F17D /* DCNSAbstractError.m */,
+			);
+			name = "Error Handling";
+			path = "Distributed Objects";
+			sourceTree = "<group>";
+		};
+		C9A3DE4D1E859231005E49DF /* sha256 */ = {
+			isa = PBXGroup;
+			children = (
+				C9A3DE4E1E859231005E49DF /* check_config.h */,
+				C9A3DE4F1E859231005E49DF /* config.h */,
+				C9A3DE501E859231005E49DF /* sha256.c */,
+				C9A3DE511E859231005E49DF /* sha256.h */,
+			);
+			path = sha256;
+			sourceTree = "<group>";
+		};
+		C9BC80AE1E7322D400D28430 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC80AF1E7322D400D28430 /* Client */,
+				C9BC80B11E7322D400D28430 /* DistributedClasses.h */,
+				C963D1CA1E8198420085BFAA /* DCNSAbstractError.h */,
+				C9BC80B21E7322D400D28430 /* Security */,
+				C9BC80B51E7322D400D28430 /* Server */,
+			);
+			path = include;
+			sourceTree = SOURCE_ROOT;
+		};
+		C9BC80AF1E7322D400D28430 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC80B01E7322D400D28430 /* DCNSClient.h */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		C9BC80B21E7322D400D28430 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC80B31E7322D400D28430 /* DCNSBasicAuthentication.h */,
+				C9BC80B41E7322D400D28430 /* DCNSConnection-Delegate.h */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		C9BC80B51E7322D400D28430 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC80B61E7322D400D28430 /* DCNSServer.h */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C92AD10A1E72EBAD0092FB38 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9192CEF1E8456F90057A7AB /* chacha20.h in Headers */,
+				C9A1ECA61E805EB60085F17D /* DCNSAbstractError.h in Headers */,
+				C92AD15F1E72EC0F0092FB38 /* ClassRepresentation.h in Headers */,
+				C9825BB81E8938A100027655 /* poly1305-donna-16.h in Headers */,
+				C92AD1611E72EC0F0092FB38 /* MethodProxy.h in Headers */,
+				C963D1C11E8186F20085BFAA /* NSHost.h in Headers */,
+				C92AD1641E72EC0F0092FB38 /* VendedObject.h in Headers */,
+				C92AD14A1E72EC0F0092FB38 /* DCNSConnection-NSUndocumented.h in Headers */,
+				C92AD1401E72EC0F0092FB38 /* DCNSClient.h in Headers */,
+				C92AD14F1E72EC0F0092FB38 /* DCNSDistantObject.h in Headers */,
+				C9A3DE411E858C19005E49DF /* DCXOR.h in Headers */,
+				C92AD1461E72EC0F0092FB38 /* DCNSBasicAuthentication.h in Headers */,
+				C9192CD71E8436B80057A7AB /* DCNSCrypto.h in Headers */,
+				C92AD1491E72EC0F0092FB38 /* DCNSConnection-NSPrivate.h in Headers */,
+				C9825BBF1E8938A100027655 /* poly1305-donna.h in Headers */,
+				C92AD1571E72EC0F0092FB38 /* DCNSRaise.h in Headers */,
+				C92AD1511E72EC0F0092FB38 /* DCNSDistantObjectRequest.h in Headers */,
+				C92AD14D1E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.h in Headers */,
+				C9A3DE331E858B1A005E49DF /* DCAES128.h in Headers */,
+				C9A3DE571E859231005E49DF /* sha256.h in Headers */,
+				C963D1C21E8186F20085BFAA /* NSMapTable.h in Headers */,
+				C92AD1431E72EC0F0092FB38 /* fishhook.h in Headers */,
+				C9825BB91E8938A100027655 /* poly1305-donna-32.h in Headers */,
+				C9A3DE531E859231005E49DF /* config.h in Headers */,
+				C92AD1521E72EC0F0092FB38 /* DCNSPortCoder.h in Headers */,
+				C9192CF01E8456F90057A7AB /* ecrypt-config.h in Headers */,
+				C92AD2721E7303230092FB38 /* DCNSServer.h in Headers */,
+				C92AD1481E72EC0F0092FB38 /* DCNSConnection-Delegate.h in Headers */,
+				C9A3DE3B1E858B1A005E49DF /* DCCryptoPassthrough.h in Headers */,
+				C963D1C31E8186F20085BFAA /* NSPortMessage.h in Headers */,
+				C9825BBB1E8938A100027655 /* poly1305-donna-8.h in Headers */,
+				C92AD14B1E72EC0F0092FB38 /* DCNSConnection.h in Headers */,
+				C9825BBA1E8938A100027655 /* poly1305-donna-64.h in Headers */,
+				C963D1C01E8186F20085BFAA /* NSHashTable.h in Headers */,
+				C9A3DE521E859231005E49DF /* check_config.h in Headers */,
+				C9192CF21E8456F90057A7AB /* ecrypt-portable.h in Headers */,
+				C92AD1541E72EC0F0092FB38 /* DCNSPortNameServer.h in Headers */,
+				C9A3DE491E85913F005E49DF /* DCSHA256.h in Headers */,
+				C92AD1561E72EC0F0092FB38 /* DCNSPrivate.h in Headers */,
+				C92AD1581E72EC0F0092FB38 /* DCNSSocketPort.h in Headers */,
+				C963D1C41E8186F20085BFAA /* NSPortNameServer.h in Headers */,
+				C9192CF11E8456F90057A7AB /* ecrypt-machine.h in Headers */,
+				C9A3DE371E858B1A005E49DF /* DCChaCha.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C92AD10B1E72EBAD0092FB38 /* Distributed Classes (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C92AD1131E72EBAD0092FB38 /* Build configuration list for PBXNativeTarget "Distributed Classes (macOS)" */;
+			buildPhases = (
+				C92AD1081E72EBAD0092FB38 /* Sources */,
+				C92AD1091E72EBAD0092FB38 /* Frameworks */,
+				C92AD10A1E72EBAD0092FB38 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Distributed Classes (macOS)";
+			productName = "Distributed Classes";
+			productReference = C92AD10C1E72EBAD0092FB38 /* libDistributedClassesmacOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C92AD22A1E7300020092FB38 /* Distributed Classes (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C92AD2311E7300030092FB38 /* Build configuration list for PBXNativeTarget "Distributed Classes (iOS)" */;
+			buildPhases = (
+				C92AD2271E7300020092FB38 /* Sources */,
+				C92AD2281E7300020092FB38 /* Frameworks */,
+				C92AD2291E7300020092FB38 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Distributed Classes (iOS)";
+			productName = "Distributed Classes (iOS)";
+			productReference = C92AD22B1E7300020092FB38 /* libDistributedClassesiOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C92AD2411E7300A10092FB38 /* Distributed Classes (tvOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C92AD2481E7300A10092FB38 /* Build configuration list for PBXNativeTarget "Distributed Classes (tvOS)" */;
+			buildPhases = (
+				C92AD23E1E7300A10092FB38 /* Sources */,
+				C92AD23F1E7300A10092FB38 /* Frameworks */,
+				C92AD2401E7300A10092FB38 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Distributed Classes (tvOS)";
+			productName = "Distributed Classes (tvOS)";
+			productReference = C92AD2421E7300A10092FB38 /* libDistributedClassestvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C92AD1021E72EB7F0092FB38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					C92AD10B1E72EBAD0092FB38 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					C92AD22A1E7300020092FB38 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					C92AD2411E7300A10092FB38 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C92AD1051E72EB7F0092FB38 /* Build configuration list for PBXProject "Distributed Classes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C92AD1011E72EB7F0092FB38;
+			productRefGroup = C92AD10D1E72EBAD0092FB38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C92AD10B1E72EBAD0092FB38 /* Distributed Classes (macOS) */,
+				C92AD22A1E7300020092FB38 /* Distributed Classes (iOS) */,
+				C92AD2411E7300A10092FB38 /* Distributed Classes (tvOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C92AD1081E72EBAD0092FB38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A1ECA71E805EB60085F17D /* DCNSAbstractError.m in Sources */,
+				C92AD1471E72EC0F0092FB38 /* DCNSBasicAuthentication.m in Sources */,
+				C92AD1601E72EC0F0092FB38 /* ClassRepresentation.m in Sources */,
+				C9825BBC1E8938A100027655 /* poly1305-donna.c in Sources */,
+				C92AD1421E72EC0F0092FB38 /* fishhook.c in Sources */,
+				C9A3DE381E858B1A005E49DF /* DCChaCha.m in Sources */,
+				C963D1B71E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */,
+				C92AD1651E72EC0F0092FB38 /* VendedObject.m in Sources */,
+				C9A3DE3C1E858B1A005E49DF /* DCCryptoPassthrough.m in Sources */,
+				C92AD1551E72EC0F0092FB38 /* DCNSPortNameServer.m in Sources */,
+				C92AD1501E72EC0F0092FB38 /* DCNSDistantObject.m in Sources */,
+				C9A3DE421E858C19005E49DF /* DCXOR.m in Sources */,
+				C92AD1411E72EC0F0092FB38 /* DCNSClient.m in Sources */,
+				C92AD1531E72EC0F0092FB38 /* DCNSPortCoder.m in Sources */,
+				C9192CEC1E8456F90057A7AB /* chacha20.c in Sources */,
+				C92AD14E1E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.m in Sources */,
+				C9A3DE341E858B1A005E49DF /* DCAES128.m in Sources */,
+				C9A3DE541E859231005E49DF /* sha256.c in Sources */,
+				C9A3DE4A1E85913F005E49DF /* DCSHA256.m in Sources */,
+				C92AD1591E72EC0F0092FB38 /* DCNSSocketPort.m in Sources */,
+				C92AD1621E72EC0F0092FB38 /* MethodProxy.m in Sources */,
+				C92AD14C1E72EC0F0092FB38 /* DCNSConnection.m in Sources */,
+				C92AD2731E7303230092FB38 /* DCNSServer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92AD2271E7300020092FB38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A1ECA81E805EB60085F17D /* DCNSAbstractError.m in Sources */,
+				C92AD2571E7300E30092FB38 /* VendedObject.m in Sources */,
+				C92AD2371E7300520092FB38 /* DCNSBasicAuthentication.m in Sources */,
+				C9825BBD1E8938A100027655 /* poly1305-donna.c in Sources */,
+				C92AD2381E7300570092FB38 /* DCNSConnection.m in Sources */,
+				C9A3DE391E858B1A005E49DF /* DCChaCha.m in Sources */,
+				C963D1B81E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */,
+				C92AD2391E7300590092FB38 /* DCNSDiffieHellmanUtility.m in Sources */,
+				C9A3DE3D1E858B1A005E49DF /* DCCryptoPassthrough.m in Sources */,
+				C92AD23A1E73005B0092FB38 /* DCNSDistantObject.m in Sources */,
+				C92AD23B1E73005D0092FB38 /* DCNSPortCoder.m in Sources */,
+				C9A3DE431E858C19005E49DF /* DCXOR.m in Sources */,
+				C92AD23C1E7300600092FB38 /* DCNSPortNameServer.m in Sources */,
+				C92AD23D1E7300640092FB38 /* DCNSSocketPort.m in Sources */,
+				C92AD2341E73004B0092FB38 /* DCNSClient.m in Sources */,
+				C9192CED1E8456F90057A7AB /* chacha20.c in Sources */,
+				C9A3DE351E858B1A005E49DF /* DCAES128.m in Sources */,
+				C9A3DE551E859231005E49DF /* sha256.c in Sources */,
+				C9A3DE4B1E85913F005E49DF /* DCSHA256.m in Sources */,
+				C92AD2351E73004F0092FB38 /* fishhook.c in Sources */,
+				C92AD2551E7300DD0092FB38 /* ClassRepresentation.m in Sources */,
+				C92AD2561E7300DF0092FB38 /* MethodProxy.m in Sources */,
+				C92AD2741E7303230092FB38 /* DCNSServer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C92AD23E1E7300A10092FB38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A1ECA91E805EB60085F17D /* DCNSAbstractError.m in Sources */,
+				C92AD24B1E7300B30092FB38 /* DCNSClient.m in Sources */,
+				C92AD24C1E7300B50092FB38 /* fishhook.c in Sources */,
+				C9825BBE1E8938A100027655 /* poly1305-donna.c in Sources */,
+				C963D1B91E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */,
+				C9A3DE3A1E858B1A005E49DF /* DCChaCha.m in Sources */,
+				C92AD24E1E7300B80092FB38 /* DCNSBasicAuthentication.m in Sources */,
+				C92AD24F1E7300BC0092FB38 /* DCNSConnection.m in Sources */,
+				C9A3DE3E1E858B1A005E49DF /* DCCryptoPassthrough.m in Sources */,
+				C92AD2501E7300BD0092FB38 /* DCNSDiffieHellmanUtility.m in Sources */,
+				C92AD2511E7300BF0092FB38 /* DCNSDistantObject.m in Sources */,
+				C9A3DE441E858C19005E49DF /* DCXOR.m in Sources */,
+				C92AD2521E7300C20092FB38 /* DCNSPortCoder.m in Sources */,
+				C92AD2531E7300C30092FB38 /* DCNSPortNameServer.m in Sources */,
+				C9192CEE1E8456F90057A7AB /* chacha20.c in Sources */,
+				C92AD2541E7300C60092FB38 /* DCNSSocketPort.m in Sources */,
+				C9A3DE361E858B1A005E49DF /* DCAES128.m in Sources */,
+				C9A3DE561E859231005E49DF /* sha256.c in Sources */,
+				C9A3DE4C1E85913F005E49DF /* DCSHA256.m in Sources */,
+				C92AD2591E7300F10092FB38 /* ClassRepresentation.m in Sources */,
+				C92AD25A1E7300F30092FB38 /* MethodProxy.m in Sources */,
+				C92AD25C1E7300F90092FB38 /* VendedObject.m in Sources */,
+				C92AD2751E7303230092FB38 /* DCNSServer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C92AD1061E72EB7F0092FB38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+			};
+			name = Debug;
+		};
+		C92AD1071E72EB7F0092FB38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+			};
+			name = Release;
+		};
+		C92AD1141E72EBAD0092FB38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = DistributedClassesmacOS;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		C92AD1151E72EBAD0092FB38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DistributedClassesmacOS;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		C92AD2321E7300030092FB38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = DistributedClassesiOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ./;
+			};
+			name = Debug;
+		};
+		C92AD2331E7300030092FB38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = DistributedClassesiOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ./;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C92AD2491E7300A10092FB38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = DistributedClassestvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		C92AD24A1E7300A10092FB38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = DistributedClassestvOS;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C92AD1051E72EB7F0092FB38 /* Build configuration list for PBXProject "Distributed Classes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92AD1061E72EB7F0092FB38 /* Debug */,
+				C92AD1071E72EB7F0092FB38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C92AD1131E72EBAD0092FB38 /* Build configuration list for PBXNativeTarget "Distributed Classes (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92AD1141E72EBAD0092FB38 /* Debug */,
+				C92AD1151E72EBAD0092FB38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C92AD2311E7300030092FB38 /* Build configuration list for PBXNativeTarget "Distributed Classes (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92AD2321E7300030092FB38 /* Debug */,
+				C92AD2331E7300030092FB38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C92AD2481E7300A10092FB38 /* Build configuration list for PBXNativeTarget "Distributed Classes (tvOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92AD2491E7300A10092FB38 /* Debug */,
+				C92AD24A1E7300A10092FB38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C92AD1021E72EB7F0092FB38 /* Project object */;
+}
