@@ -86,6 +86,8 @@ Known Limitations
 
 In addition, the limiting factor preventing support for e.g. GNUStep, mySTEP and WinObjC, is mainly the library utilised for rebinding runtime symbols. Currently, this will only work for Mach-O executables.
 
+It's currently unknown if this library can be used in applications that are submitted to the App Store. 
+
 License
 ===================
 
