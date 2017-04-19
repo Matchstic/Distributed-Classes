@@ -15,7 +15,7 @@ You can integrate Distributed Classes into your project in a number of ways:
 
 1. Add via CocoaPods by adding:
 
-    ```pod "libGitHubIssues", "~> 0.0.1"```
+    ```pod "DistributedClasses"```
     
 to your Podfile
 
