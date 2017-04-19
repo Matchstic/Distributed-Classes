@@ -6,8 +6,8 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSEnumerator.h>
 
-#if !defined(__FOUNDATION_NSMAPTABLE__)
-#define __FOUNDATION_NSMAPTABLE__ 1
+#if !defined(__FOUNDATION_DCNSMAPTABLE__)
+#define __FOUNDATION_DCNSMAPTABLE__ 1
 
 @class NSMapTable;
 

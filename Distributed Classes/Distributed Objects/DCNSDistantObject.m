@@ -114,16 +114,16 @@ static Class _doClass;
 
 + (instancetype)proxyWithLocal:(id)anObject connection:(DCNSConnection*)aConnection {
     // This is initialization for vending objects or encoding references so that they can be decoded as remote proxies
-    return [[[self alloc] initWithLocal:anObject connection:aConnection] autorelease];
+    return [[[DCNSDistantObject alloc] initWithLocal:anObject connection:aConnection] autorelease];
 }
 
 + (instancetype) proxyWithTarget:(id)anObject connection:(DCNSConnection*)aConnection {
     // remoteObject is an id in another thread or another application or address space!
-    return [[[self alloc] initWithTarget:(unsigned int)anObject connection:aConnection] autorelease];
+    return [[[DCNSDistantObject alloc] initWithTarget:(unsigned int)anObject connection:aConnection] autorelease];
 }
 
 + (instancetype)newDistantObjectWithCoder:(NSCoder *)coder {
-    return [[self alloc] initWithCoder:coder];
+    return [[DCNSDistantObject alloc] initWithCoder:coder];
 }
 
 - (instancetype)init {

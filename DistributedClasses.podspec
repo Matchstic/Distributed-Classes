@@ -72,8 +72,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  #s.source       = { :git => "https://github.com/Matchstic/Distributed-Classes.git", :tag => "#{s.version}" }
-  s.source       = { :git => "./" }
+  s.source       = { :git => "https://github.com/Matchstic/Distributed-Classes.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -86,24 +85,6 @@ Pod::Spec.new do |s|
 
   s.source_files  = "Distributed\ Classes/**/*", "include/**/*"
   s.public_header_files = "include/**/*"
-  
-  # s.ios.prefix_header_contents = #define TARGET_OS_IPHONE 1
-  # s.osx.prefix_header_contents = #define TARGET_OS_IPHONE 0
-  
-  s.osx.exclude_files = "**/Compatibility Headers/*"
-
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  #s.resource_bundles = {
-  #  ]
-  #}
-
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -123,19 +104,19 @@ Pod::Spec.new do |s|
   # Most files are non-ARC currently.
   s.requires_arc = false
   
-  arc_files = "Distributed\ Classes/Server/ClassRepresentation.m",
-    "Distributed\ Classes/Server/VendedObject.m",
-    "Distributed\ Classes/Server/MethodProxy.m"
+  #arc_files = "Distributed\ Classes/Server/ClassRepresentation.m",
+  #  "Distributed\ Classes/Server/VendedObject.m",
+  #  "Distributed\ Classes/Server/MethodProxy.m"
     
-  s.exclude_files = arc_files
+  #s.exclude_files = arc_files
   
-  s.subspec 'arc' do |sna|
-        sna.requires_arc = true
-        sna.source_files = "Distributed\ Classes/**/*.h", 
-          "Distributed\ Classes/Server/ClassRepresentation.{h,m}",
-          "Distributed\ Classes/Server/VendedObject.{h,m}",
-          "Distributed\ Classes/Server/MethodProxy.{h,m}"
-          
-  end
+  #s.subspec 'arc' do |sna|
+  #      sna.requires_arc = true
+  #      sna.source_files = "Distributed\ Classes/Distributed Objects/DCNSDistantObject.h", 
+  #        "Distributed\ Classes/Server/ClassRepresentation.{h,m}",
+  #        "Distributed\ Classes/Server/VendedObject.{h,m}",
+  #        "Distributed\ Classes/Server/MethodProxy.{h,m}"
+  #        
+  #end
 
 end

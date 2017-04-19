@@ -25,9 +25,9 @@
 #import <Foundation/NSHashTable.h>
 #import <Foundation/NSMapTable.h>
 #else
-#import "NSPortMessage.h"
-#import "NSMapTable.h" // For symbols.
-#import "NSHashTable.h" // For symbols.
+#import "DCNSPortMessage.h"
+#import "DCNSMapTable.h" // For symbols.
+#import "DCNSHashTable.h" // For symbols.
 #endif
 
 #import <Foundation/NSData.h>

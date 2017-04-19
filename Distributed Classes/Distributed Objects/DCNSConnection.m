@@ -70,6 +70,10 @@
 
 @end
 
+@interface DCNSAbstractError (Private)
+-(instancetype)initWithName:(NSString*)name reason:(NSString*)reason callStackSymbols:(NSArray*)callStackSymbols andUserInfo:(NSDictionary*)userinfo;
+@end
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Defines
 
