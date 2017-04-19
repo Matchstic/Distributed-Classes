@@ -19,7 +19,7 @@ Various files in mGSTEP/Foundation are derived from libFoundation
 and in deference to it's authors these files retain a BSD type 
 license as follows:
 
-Copyright (C) 1995, 1996 Ovidiu Predescu and Mircea Oancea.
+Copyright (C) 1995, 1996 Ovidiu Predescu and Mircea Oancea.  
 All rights reserved.
 
 Permission to use, copy, modify, and distribute this software and
@@ -35,9 +35,9 @@ damages whatsoever resulting from loss of use, data or profits, whether
 in an action of contract, negligence or other tortious action, arising
 out of or in connection with the use or performance of this software.
 
-<b>Fishhook</b> 
-Copyright (c) 2013, Facebook, Inc.
-All rights reserved.
+<b>Fishhook</b>  
+Copyright (c) 2013, Facebook, Inc.  
+All rights reserved.  
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -60,9 +60,9 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-<b>AQToolkit</b>
-Copyright (c) 2008-2009, Jim Dovey
-All rights reserved.
+<b>AQToolkit</b>  
+Copyright (c) 2008-2009, Jim Dovey  
+All rights reserved.  
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -91,8 +91,8 @@ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-<b>Diffie-Hellman-iOS</b>
-Copyright (c) 2012 Ben Holland
+<b>Diffie-Hellman-iOS</b>  
+Copyright (c) 2012 Ben Holland  
 
 Permission is hereby granted, free of charge, to any person obtaining a copy 
 of this software and associated documentation files (the "Software"), to deal 
@@ -111,13 +111,13 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRA
 OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 DEALINGS IN THE SOFTWARE.
 
-<b>ChaCha20 (implementation)</b>
+<b>ChaCha20 (implementation)</b>  
 Subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was 
 not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-<b>Poly1305 (implementation)</b>
-Copyright (c) Andrew Moon
-https://github.com/floodyberry/poly1305-donna
+<b>Poly1305 (implementation)</b>  
+Copyright (c) Andrew Moon  
+https://github.com/floodyberry/poly1305-donna  
 
 Licensed as public domain.
 

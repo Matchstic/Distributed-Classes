@@ -39,7 +39,7 @@
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
 #import <Foundation/NSHost.h>
 #else
-#import "NSHost.h" // Missing on iOS.
+#import "DCNSHost.h" // Missing on iOS.
 #endif
 
 #import <Foundation/NSNotification.h>
@@ -50,7 +50,7 @@
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
 #import <Foundation/NSPortMessage.h>
 #else
-#import "NSPortMessage.h"
+#import "DCNSPortMessage.h"
 #endif
 
 #import <objc/runtime.h>

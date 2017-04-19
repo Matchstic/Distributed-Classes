@@ -10,7 +10,7 @@
 //
 
 #import "DCNSClient.h"
-#import "ReplacedMethods.m"
+#import "ReplacedMethods.h"
 
 #define DCNSClientErrorDomain @"DCNSClientErrorDomain"
 

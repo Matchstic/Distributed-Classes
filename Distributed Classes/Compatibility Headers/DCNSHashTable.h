@@ -6,8 +6,8 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSEnumerator.h>
 
-#if !defined(__FOUNDATION_NSHASHTABLE__)
-#define __FOUNDATION_NSHASHTABLE__ 1
+#if !defined(__FOUNDATION_DCNSHASHTABLE__)
+#define __FOUNDATION_DCNSHASHTABLE__ 1
 
 @class NSHashTable;
 

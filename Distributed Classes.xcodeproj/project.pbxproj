@@ -73,18 +73,15 @@
 		C92AD2731E7303230092FB38 /* DCNSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD2711E7303230092FB38 /* DCNSServer.m */; };
 		C92AD2741E7303230092FB38 /* DCNSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD2711E7303230092FB38 /* DCNSServer.m */; };
 		C92AD2751E7303230092FB38 /* DCNSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD2711E7303230092FB38 /* DCNSServer.m */; };
+		C955F7E21EA7E27C00B9A87A /* ReplacedMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD11B1E72EC0F0092FB38 /* ReplacedMethods.m */; };
+		C955F7E31EA7E28100B9A87A /* ReplacedMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD11B1E72EC0F0092FB38 /* ReplacedMethods.m */; };
+		C955F7E41EA7E28900B9A87A /* ReplacedMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD11B1E72EC0F0092FB38 /* ReplacedMethods.m */; };
+		C955F7E61EA7E31D00B9A87A /* ServerRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13D1E72EC0F0092FB38 /* ServerRegistration.m */; };
+		C955F7E71EA7E32200B9A87A /* ServerRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13D1E72EC0F0092FB38 /* ServerRegistration.m */; };
+		C955F7E81EA7E32600B9A87A /* ServerRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD13D1E72EC0F0092FB38 /* ServerRegistration.m */; };
 		C963D1B71E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */; };
 		C963D1B81E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */; };
 		C963D1B91E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */; };
-		C963D1C01E8186F20085BFAA /* NSHashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BB1E8186F20085BFAA /* NSHashTable.h */; };
-		C963D1C11E8186F20085BFAA /* NSHost.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BC1E8186F20085BFAA /* NSHost.h */; };
-		C963D1C21E8186F20085BFAA /* NSMapTable.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BD1E8186F20085BFAA /* NSMapTable.h */; };
-		C963D1C31E8186F20085BFAA /* NSPortMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BE1E8186F20085BFAA /* NSPortMessage.h */; };
-		C963D1C41E8186F20085BFAA /* NSPortNameServer.h in Headers */ = {isa = PBXBuildFile; fileRef = C963D1BF1E8186F20085BFAA /* NSPortNameServer.h */; };
-		C9825BB81E8938A100027655 /* poly1305-donna-16.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825BAF1E8938A100027655 /* poly1305-donna-16.h */; };
-		C9825BB91E8938A100027655 /* poly1305-donna-32.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825BB01E8938A100027655 /* poly1305-donna-32.h */; };
-		C9825BBA1E8938A100027655 /* poly1305-donna-64.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825BB11E8938A100027655 /* poly1305-donna-64.h */; };
-		C9825BBB1E8938A100027655 /* poly1305-donna-8.h in Headers */ = {isa = PBXBuildFile; fileRef = C9825BB21E8938A100027655 /* poly1305-donna-8.h */; };
 		C9825BBC1E8938A100027655 /* poly1305-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = C9825BB31E8938A100027655 /* poly1305-donna.c */; };
 		C9825BBD1E8938A100027655 /* poly1305-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = C9825BB31E8938A100027655 /* poly1305-donna.c */; };
 		C9825BBE1E8938A100027655 /* poly1305-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = C9825BB31E8938A100027655 /* poly1305-donna.c */; };
@@ -186,17 +183,14 @@
 		C92AD2421E7300A10092FB38 /* libDistributedClassestvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDistributedClassestvOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92AD2701E7303230092FB38 /* DCNSServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSServer.h; sourceTree = "<group>"; };
 		C92AD2711E7303230092FB38 /* DCNSServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSServer.m; sourceTree = "<group>"; };
+		C955F7DB1EA7D6DF00B9A87A /* DCNSHashTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCNSHashTable.h; path = "Distributed Classes/Compatibility Headers/DCNSHashTable.h"; sourceTree = SOURCE_ROOT; };
+		C955F7DC1EA7D6DF00B9A87A /* DCNSHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCNSHost.h; path = "Distributed Classes/Compatibility Headers/DCNSHost.h"; sourceTree = SOURCE_ROOT; };
+		C955F7DD1EA7D6DF00B9A87A /* DCNSMapTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCNSMapTable.h; path = "Distributed Classes/Compatibility Headers/DCNSMapTable.h"; sourceTree = SOURCE_ROOT; };
+		C955F7DE1EA7D6DF00B9A87A /* DCNSPortMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCNSPortMessage.h; path = "Distributed Classes/Compatibility Headers/DCNSPortMessage.h"; sourceTree = SOURCE_ROOT; };
+		C955F7E01EA7D72400B9A87A /* NSPortNameServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSPortNameServer.h; path = "Distributed Classes/Compatibility Headers/NSPortNameServer.h"; sourceTree = SOURCE_ROOT; };
+		C955F7E11EA7E1AD00B9A87A /* ReplacedMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplacedMethods.h; sourceTree = "<group>"; };
+		C955F7E51EA7E2E900B9A87A /* ServerRegistration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerRegistration.h; sourceTree = "<group>"; };
 		C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSDistantObjectRequest.m; sourceTree = "<group>"; };
-		C963D1BB1E8186F20085BFAA /* NSHashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHashTable.h; sourceTree = "<group>"; };
-		C963D1BC1E8186F20085BFAA /* NSHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHost.h; sourceTree = "<group>"; };
-		C963D1BD1E8186F20085BFAA /* NSMapTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMapTable.h; sourceTree = "<group>"; };
-		C963D1BE1E8186F20085BFAA /* NSPortMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPortMessage.h; sourceTree = "<group>"; };
-		C963D1BF1E8186F20085BFAA /* NSPortNameServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPortNameServer.h; sourceTree = "<group>"; };
-		C963D1CA1E8198420085BFAA /* DCNSAbstractError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSAbstractError.h; sourceTree = "<group>"; };
-		C9825BAF1E8938A100027655 /* poly1305-donna-16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna-16.h"; sourceTree = "<group>"; };
-		C9825BB01E8938A100027655 /* poly1305-donna-32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna-32.h"; sourceTree = "<group>"; };
-		C9825BB11E8938A100027655 /* poly1305-donna-64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna-64.h"; sourceTree = "<group>"; };
-		C9825BB21E8938A100027655 /* poly1305-donna-8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna-8.h"; sourceTree = "<group>"; };
 		C9825BB31E8938A100027655 /* poly1305-donna.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "poly1305-donna.c"; sourceTree = "<group>"; };
 		C9825BB41E8938A100027655 /* poly1305-donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna.h"; sourceTree = "<group>"; };
 		C9A1ECA41E805EB60085F17D /* DCNSAbstractError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCNSAbstractError.h; path = "Error Handling/DCNSAbstractError.h"; sourceTree = "<group>"; };
@@ -215,11 +209,6 @@
 		C9A3DE4F1E859231005E49DF /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		C9A3DE501E859231005E49DF /* sha256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256.c; sourceTree = "<group>"; };
 		C9A3DE511E859231005E49DF /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha256.h; sourceTree = "<group>"; };
-		C9BC80B01E7322D400D28430 /* DCNSClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSClient.h; sourceTree = "<group>"; };
-		C9BC80B11E7322D400D28430 /* DistributedClasses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistributedClasses.h; sourceTree = "<group>"; };
-		C9BC80B31E7322D400D28430 /* DCNSBasicAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSBasicAuthentication.h; sourceTree = "<group>"; };
-		C9BC80B41E7322D400D28430 /* DCNSConnection-Delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCNSConnection-Delegate.h"; sourceTree = "<group>"; };
-		C9BC80B61E7322D400D28430 /* DCNSServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSServer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,7 +253,6 @@
 			children = (
 				C92AD10E1E72EBAD0092FB38 /* Distributed Classes */,
 				C92AD10D1E72EBAD0092FB38 /* Products */,
-				C9BC80AE1E7322D400D28430 /* include */,
 			);
 			sourceTree = "<group>";
 		};
@@ -297,6 +285,7 @@
 			children = (
 				C92AD1171E72EC0F0092FB38 /* DCNSClient.h */,
 				C92AD1181E72EC0F0092FB38 /* DCNSClient.m */,
+				C955F7E11EA7E1AD00B9A87A /* ReplacedMethods.h */,
 				C92AD11B1E72EC0F0092FB38 /* ReplacedMethods.m */,
 				C963D1CD1E8199F50085BFAA /* fishhook */,
 			);
@@ -340,6 +329,7 @@
 			children = (
 				C92AD2701E7303230092FB38 /* DCNSServer.h */,
 				C92AD2711E7303230092FB38 /* DCNSServer.m */,
+				C955F7E51EA7E2E900B9A87A /* ServerRegistration.h */,
 				C92AD13D1E72EC0F0092FB38 /* ServerRegistration.m */,
 				C963D1CC1E8199E40085BFAA /* Proxied Objects */,
 			);
@@ -350,11 +340,11 @@
 			isa = PBXGroup;
 			children = (
 				C92AD1301E72EC0F0092FB38 /* DCNSRaise.h */,
-				C963D1BB1E8186F20085BFAA /* NSHashTable.h */,
-				C963D1BC1E8186F20085BFAA /* NSHost.h */,
-				C963D1BD1E8186F20085BFAA /* NSMapTable.h */,
-				C963D1BE1E8186F20085BFAA /* NSPortMessage.h */,
-				C963D1BF1E8186F20085BFAA /* NSPortNameServer.h */,
+				C955F7DB1EA7D6DF00B9A87A /* DCNSHashTable.h */,
+				C955F7DC1EA7D6DF00B9A87A /* DCNSHost.h */,
+				C955F7DD1EA7D6DF00B9A87A /* DCNSMapTable.h */,
+				C955F7DE1EA7D6DF00B9A87A /* DCNSPortMessage.h */,
+				C955F7E01EA7D72400B9A87A /* NSPortNameServer.h */,
 			);
 			path = "Compatibility Headers";
 			sourceTree = "<group>";
@@ -434,10 +424,6 @@
 		C9825BAD1E8938A100027655 /* poly1305-donna */ = {
 			isa = PBXGroup;
 			children = (
-				C9825BAF1E8938A100027655 /* poly1305-donna-16.h */,
-				C9825BB01E8938A100027655 /* poly1305-donna-32.h */,
-				C9825BB11E8938A100027655 /* poly1305-donna-64.h */,
-				C9825BB21E8938A100027655 /* poly1305-donna-8.h */,
 				C9825BB31E8938A100027655 /* poly1305-donna.c */,
 				C9825BB41E8938A100027655 /* poly1305-donna.h */,
 			);
@@ -465,43 +451,6 @@
 			path = sha256;
 			sourceTree = "<group>";
 		};
-		C9BC80AE1E7322D400D28430 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				C9BC80AF1E7322D400D28430 /* Client */,
-				C9BC80B11E7322D400D28430 /* DistributedClasses.h */,
-				C963D1CA1E8198420085BFAA /* DCNSAbstractError.h */,
-				C9BC80B21E7322D400D28430 /* Security */,
-				C9BC80B51E7322D400D28430 /* Server */,
-			);
-			path = include;
-			sourceTree = SOURCE_ROOT;
-		};
-		C9BC80AF1E7322D400D28430 /* Client */ = {
-			isa = PBXGroup;
-			children = (
-				C9BC80B01E7322D400D28430 /* DCNSClient.h */,
-			);
-			path = Client;
-			sourceTree = "<group>";
-		};
-		C9BC80B21E7322D400D28430 /* Security */ = {
-			isa = PBXGroup;
-			children = (
-				C9BC80B31E7322D400D28430 /* DCNSBasicAuthentication.h */,
-				C9BC80B41E7322D400D28430 /* DCNSConnection-Delegate.h */,
-			);
-			path = Security;
-			sourceTree = "<group>";
-		};
-		C9BC80B51E7322D400D28430 /* Server */ = {
-			isa = PBXGroup;
-			children = (
-				C9BC80B61E7322D400D28430 /* DCNSServer.h */,
-			);
-			path = Server;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -512,9 +461,7 @@
 				C9192CEF1E8456F90057A7AB /* chacha20.h in Headers */,
 				C9A1ECA61E805EB60085F17D /* DCNSAbstractError.h in Headers */,
 				C92AD15F1E72EC0F0092FB38 /* ClassRepresentation.h in Headers */,
-				C9825BB81E8938A100027655 /* poly1305-donna-16.h in Headers */,
 				C92AD1611E72EC0F0092FB38 /* MethodProxy.h in Headers */,
-				C963D1C11E8186F20085BFAA /* NSHost.h in Headers */,
 				C92AD1641E72EC0F0092FB38 /* VendedObject.h in Headers */,
 				C92AD14A1E72EC0F0092FB38 /* DCNSConnection-NSUndocumented.h in Headers */,
 				C92AD1401E72EC0F0092FB38 /* DCNSClient.h in Headers */,
@@ -529,27 +476,20 @@
 				C92AD14D1E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.h in Headers */,
 				C9A3DE331E858B1A005E49DF /* DCAES128.h in Headers */,
 				C9A3DE571E859231005E49DF /* sha256.h in Headers */,
-				C963D1C21E8186F20085BFAA /* NSMapTable.h in Headers */,
 				C92AD1431E72EC0F0092FB38 /* fishhook.h in Headers */,
-				C9825BB91E8938A100027655 /* poly1305-donna-32.h in Headers */,
 				C9A3DE531E859231005E49DF /* config.h in Headers */,
 				C92AD1521E72EC0F0092FB38 /* DCNSPortCoder.h in Headers */,
 				C9192CF01E8456F90057A7AB /* ecrypt-config.h in Headers */,
 				C92AD2721E7303230092FB38 /* DCNSServer.h in Headers */,
 				C92AD1481E72EC0F0092FB38 /* DCNSConnection-Delegate.h in Headers */,
 				C9A3DE3B1E858B1A005E49DF /* DCCryptoPassthrough.h in Headers */,
-				C963D1C31E8186F20085BFAA /* NSPortMessage.h in Headers */,
-				C9825BBB1E8938A100027655 /* poly1305-donna-8.h in Headers */,
 				C92AD14B1E72EC0F0092FB38 /* DCNSConnection.h in Headers */,
-				C9825BBA1E8938A100027655 /* poly1305-donna-64.h in Headers */,
-				C963D1C01E8186F20085BFAA /* NSHashTable.h in Headers */,
 				C9A3DE521E859231005E49DF /* check_config.h in Headers */,
 				C9192CF21E8456F90057A7AB /* ecrypt-portable.h in Headers */,
 				C92AD1541E72EC0F0092FB38 /* DCNSPortNameServer.h in Headers */,
 				C9A3DE491E85913F005E49DF /* DCSHA256.h in Headers */,
 				C92AD1561E72EC0F0092FB38 /* DCNSPrivate.h in Headers */,
 				C92AD1581E72EC0F0092FB38 /* DCNSSocketPort.h in Headers */,
-				C963D1C41E8186F20085BFAA /* NSPortNameServer.h in Headers */,
 				C9192CF11E8456F90057A7AB /* ecrypt-machine.h in Headers */,
 				C9A3DE371E858B1A005E49DF /* DCChaCha.h in Headers */,
 			);
@@ -668,6 +608,7 @@
 				C92AD1501E72EC0F0092FB38 /* DCNSDistantObject.m in Sources */,
 				C9A3DE421E858C19005E49DF /* DCXOR.m in Sources */,
 				C92AD1411E72EC0F0092FB38 /* DCNSClient.m in Sources */,
+				C955F7E21EA7E27C00B9A87A /* ReplacedMethods.m in Sources */,
 				C92AD1531E72EC0F0092FB38 /* DCNSPortCoder.m in Sources */,
 				C9192CEC1E8456F90057A7AB /* chacha20.c in Sources */,
 				C92AD14E1E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.m in Sources */,
@@ -678,6 +619,7 @@
 				C92AD1621E72EC0F0092FB38 /* MethodProxy.m in Sources */,
 				C92AD14C1E72EC0F0092FB38 /* DCNSConnection.m in Sources */,
 				C92AD2731E7303230092FB38 /* DCNSServer.m in Sources */,
+				C955F7E81EA7E32600B9A87A /* ServerRegistration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C955F7E71EA7E32200B9A87A /* ServerRegistration.m in Sources */,
 				C9A1ECA81E805EB60085F17D /* DCNSAbstractError.m in Sources */,
 				C92AD2571E7300E30092FB38 /* VendedObject.m in Sources */,
 				C92AD2371E7300520092FB38 /* DCNSBasicAuthentication.m in Sources */,
@@ -700,6 +643,7 @@
 				C92AD23C1E7300600092FB38 /* DCNSPortNameServer.m in Sources */,
 				C92AD23D1E7300640092FB38 /* DCNSSocketPort.m in Sources */,
 				C92AD2341E73004B0092FB38 /* DCNSClient.m in Sources */,
+				C955F7E31EA7E28100B9A87A /* ReplacedMethods.m in Sources */,
 				C9192CED1E8456F90057A7AB /* chacha20.c in Sources */,
 				C9A3DE351E858B1A005E49DF /* DCAES128.m in Sources */,
 				C9A3DE551E859231005E49DF /* sha256.c in Sources */,
@@ -717,6 +661,7 @@
 			files = (
 				C9A1ECA91E805EB60085F17D /* DCNSAbstractError.m in Sources */,
 				C92AD24B1E7300B30092FB38 /* DCNSClient.m in Sources */,
+				C955F7E41EA7E28900B9A87A /* ReplacedMethods.m in Sources */,
 				C92AD24C1E7300B50092FB38 /* fishhook.c in Sources */,
 				C9825BBE1E8938A100027655 /* poly1305-donna.c in Sources */,
 				C963D1B91E817DA40085BFAA /* DCNSDistantObjectRequest.m in Sources */,
@@ -738,6 +683,7 @@
 				C92AD25A1E7300F30092FB38 /* MethodProxy.m in Sources */,
 				C92AD25C1E7300F90092FB38 /* VendedObject.m in Sources */,
 				C92AD2751E7303230092FB38 /* DCNSServer.m in Sources */,
+				C955F7E61EA7E31D00B9A87A /* ServerRegistration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

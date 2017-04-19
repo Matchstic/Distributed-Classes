@@ -83,22 +83,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Distributed Classes/*.{h,m,c}"
-  s.public_header_files = "include/*.{h}"
-
-
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  #s.resource_bundles = {
-  #  ]
-  #}
-
+  s.source_files  = "Distributed\ Classes/**/*", "include/**/*"
+  s.public_header_files = "include/**/*"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -118,15 +104,19 @@ Pod::Spec.new do |s|
   # Most files are non-ARC currently.
   s.requires_arc = false
   
-  arc_files = "Distributed Classes/Server/ClassRepresentation.m",
-    "Distributed Classes/Server/VendedObject.m",
-    "Distributed Classes/Server/MethodProxy.m"
+  #arc_files = "Distributed\ Classes/Server/ClassRepresentation.m",
+  #  "Distributed\ Classes/Server/VendedObject.m",
+  #  "Distributed\ Classes/Server/MethodProxy.m"
     
-  s.exclude_files = arc_files
+  #s.exclude_files = arc_files
   
-  s.subspec 'arc' do |sna|
-        sna.requires_arc = true
-        sna.source_files = arc_files
-  end
+  #s.subspec 'arc' do |sna|
+  #      sna.requires_arc = true
+  #      sna.source_files = "Distributed\ Classes/Distributed Objects/DCNSDistantObject.h", 
+  #        "Distributed\ Classes/Server/ClassRepresentation.{h,m}",
+  #        "Distributed\ Classes/Server/VendedObject.{h,m}",
+  #        "Distributed\ Classes/Server/MethodProxy.{h,m}"
+  #        
+  #end
 
 end

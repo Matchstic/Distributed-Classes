@@ -24,6 +24,8 @@
 #include <objc/message.h>
 #include "fishhook.h"
 
+#include "ReplacedMethods.h"
+
 #pragma Interfaces etc
 
 struct objc_method {
@@ -31,22 +33,6 @@ struct objc_method {
     char *method_types;
     IMP method_imp;
 };
-
-@interface ClassRepresentation : NSObject
--(id)alloc;
--(Class)storedClass;
--(const char*)storedClassName;
-@end
-
-@interface MethodProxy : NSObject
--(const char*)typeEncoding;
--(unsigned int)getNumberOfArguments;
--(SEL)getName;
--(char*)copyReturnType;
--(char*)copyArgumentType:(unsigned int)index;
--(char*)getArgumentType:(unsigned int)index;
--(char*)getReturnType;
-@end
 
 @protocol VendedObjectProtocol <NSObject>
 @required
@@ -56,17 +42,8 @@ struct objc_method {
 -(MethodProxy*)class_getClassMethod:(ClassRepresentation*)class andSelector:(SEL)selector;
 @end
 
-@interface VendedObject : NSObject
--(ClassRepresentation*)objc_getClass:(const char*)name;
--(ClassRepresentation*)object_getClass:(id)object;
--(MethodProxy*)class_getInstanceMethod:(ClassRepresentation*)class andSelector:(SEL)selector;
--(MethodProxy*)class_getClassMethod:(ClassRepresentation*)class andSelector:(SEL)selector;
-@end
-
 #pragma mark Static variables
 
-static VendedObject *remoteProxy;
-static DCNSConnection *remoteConnection;
 static Class distantObjectClass;
 
 #pragma mark Function definitions

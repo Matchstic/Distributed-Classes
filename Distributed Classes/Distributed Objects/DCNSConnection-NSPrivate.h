@@ -13,8 +13,8 @@
 //
 
 #import <Foundation/NSObject.h>
+#import "DCNSConnection.h"
 
-@class DCNSConnection;
 @class DCNSDistantObject;
 
 @interface DCNSConnection (NSPrivate)

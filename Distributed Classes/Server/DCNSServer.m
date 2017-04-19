@@ -10,7 +10,7 @@
 //
 
 #import "DCNSServer.h"
-#import "ServerRegistration.m"
+#import "ServerRegistration.h"
 
 #define DCNSServerErrorDomain @"DCNSServerErrorDomain"
 

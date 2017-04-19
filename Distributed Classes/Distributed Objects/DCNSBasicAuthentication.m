@@ -62,7 +62,8 @@
     
     if (self) {
         // Configure some defaults.
-        self.encryptionMode = kDCNSBasicEncryptionXOR;
+        self.encryptionMode = kDCNSBasicEncryptionChaCha;
+        self.useMessageAuthentication = YES;
     }
     
     return self;

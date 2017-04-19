@@ -10,7 +10,7 @@
  Everything else from good guessing and inspecting data that is exchanged
  
  Updates to support cross-platform coding/decoding with iOS.
- Author: Matt Clarke (psymac)
+ Author: Matt Clarke <psymac@nottingham.ac.uk>
  Date: December 2016
  
  This file is part of the mySTEP Library and is provided

@@ -58,7 +58,6 @@
 #import <Foundation/Foundation.h>
 
 NSData * _runCryptor(CCCryptorRef cryptor, CCCryptorStatus *status, NSData *input);
-static void FixKeyLengths( CCAlgorithm algorithm, NSMutableData * keyData, NSMutableData * ivData );
 NSData *randomDataWithBytes(NSUInteger length);
 
 NSData * _runCryptor(CCCryptorRef cryptor, CCCryptorStatus *status, NSData *input) {

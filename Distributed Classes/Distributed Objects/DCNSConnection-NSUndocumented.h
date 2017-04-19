@@ -15,8 +15,8 @@
 //
 
 #import <Foundation/NSObject.h>
+#import "DCNSConnection.h"
 
-@class DCNSConnection;
 @class NSPort;
 @class NSNotification;
 @class NSInvocation;

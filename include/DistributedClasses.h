@@ -44,14 +44,14 @@
 #pragma mark Imports
 
 // Security module stuff.
-#import "Security/DCNSBasicAuthentication.h"
-#import "Security/DCNSConnection-Delegate.h"
+#import "DCNSBasicAuthentication.h"
+#import "DCNSConnection-Delegate.h"
 
 // Server-side
-#import "Server/DCNSServer.h"
+#import "DCNSServer.h"
 
 // Client-side
-#import "Client/DCNSClient.h"
+#import "DCNSClient.h"
 
 // Errors
 #import "DCNSAbstractError.h"
