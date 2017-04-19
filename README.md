@@ -21,7 +21,7 @@ to your Podfile
 
 OR
 
-2. Link in an appropriate static library from the Release page.
+2. Link in an appropriate static library from the Release page, copying in the headers from the ```include``` directory.
 
 OR
 
