@@ -3,6 +3,11 @@ Distributed Classes
 
 Distributed Classes builds upon Distributed Objects to transparently allow multiple processes to share classes as if they were native to each process. These processes need not be running on the same machine, and can scale across networks.
 
+Features
+===================
+
+  
+
 Installation
 ===================
 
@@ -25,13 +30,43 @@ OR
 Usage
 ===================
 
+Since this is a distributed system, you will need to initialise Distributed Classes in both the process acting as a server of classes, and the process acting as a client. Other than that, all you need to do to access a remote class in the client process is to reference it as follows:
 
+```RemoteClass *object = [[$c(RemoteClass) alloc] init];```
 
-Features
-===================
+With the main difference being the usage of ```$c()```.
 
+To initialise the library in the **client process**, call:
 
+```
+NSError *error;
+NSString *serviceName = @"<unique_name>";
+[DCNSClient initialiseToRemoteWithService:serviceName authenticationDelegate:auth andError:&error];
+```
 
+Where:  
+```auth``` is either nil, or an object that responds to ```DCNSConnectionDelegate```, to provide modular security.  
+```error``` will contain information about errors setting up the library, if any.  
+```serviceName``` is a unique name the server process makes classes available on.  
+
+In the **server process**, call:
+
+```
+NSError *error;
+NSString *serviceName = @"<unique_name>";
+int portNumber = 0;
+[DCNSServer initialiseAsRemoteWithService:serviceName portNumber:portNumber authenticationDelegate:auth andError:&error];
+```
+
+Where:  
+```auth``` is either nil, or an object that responds to ```DCNSConnectionDelegate```, to provide modular security.  
+```error``` will contain information about errors setting up the library, if any.  
+```serviceName``` is a unique name to make classes available on.  
+```portNumber``` is the port number to publish ```serviceName``` on, with 0 causing an automatic choosing of a port.  
+
+And, that's it for a basic setup.
+
+Further options are provided, such as a global handler block for when transmission and other such errors arise. Please see the Wiki on how to configure those.
 
 Supported Platforms
 ===================
