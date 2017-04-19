@@ -13,8 +13,3 @@ GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-Various files in Distributed Classes are derived from mySTEP and in deference 
-to it's authors these files retain a GNU Library General Public License. Note 
-that this license has since been superseded by the GNU Lesser General Public 
-License.
