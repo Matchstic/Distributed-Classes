@@ -87,8 +87,8 @@ Pod::Spec.new do |s|
   s.source_files  = "Distributed\ Classes/**/*", "include/**/*"
   s.public_header_files = "include/**/*"
   
-  s.ios.prefix_header_contents = #define TARGET_OS_MAC 0
-  s.osx.prefix_header_contents = #define TARGET_OS_MAC 1
+  s.ios.prefix_header_contents = #define TARGET_OS_IPHONE 1
+  s.osx.prefix_header_contents = #define TARGET_OS_IPHONE 0
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

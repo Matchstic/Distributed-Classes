@@ -9,7 +9,7 @@
    under the terms of the GNU Library General Public License.
  
    Heavily refactored for standalone Distributed Objects
-   Author: Matt Clarke (psymac)
+   Author: Matt Clarke <psymac@nottingham.ac.uk>
    Date: November 2016
 */
 
@@ -60,11 +60,11 @@
 // Little trick from http://stackoverflow.com/a/30106751 so we can nicely cast to void *
 #define INT2VOIDP(i) (void*)(uintptr_t)(i)
 
-// psymac :: 0 - no logging, 1 - basic, 2 - somewhat verbose, 3 - can't see the wood for the trees
+// 0 - no logging, 1 - basic, 2 - somewhat verbose, 3 - can't see the wood for the trees
 #define DEBUG_LOG_LEVEL 0 // Note: in client, level 2 seems to break things.
 
 @interface NSPort (NSPrivate)
-- (unsigned int)machPort; // psymac :: Typically used in debug logging.
+- (unsigned int)machPort; // Typically used in our debug logging.
 @end
 
 @interface NSMethodSignature (NSUndocumented)

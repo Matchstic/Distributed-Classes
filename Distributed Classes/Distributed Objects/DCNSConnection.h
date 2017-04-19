@@ -20,7 +20,7 @@
    under the terms of the GNU Library General Public License.
  
    Refactoring for standalone Distributed Objects
-   Author: Matt Clarke (psymac)
+   Author: Matt Clarke <psymac@nottingham.ac.uk>
    Date: November 2016
 */
 

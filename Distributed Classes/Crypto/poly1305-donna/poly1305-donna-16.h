@@ -2,11 +2,6 @@
 	poly1305 implementation using 16 bit * 16 bit = 32 bit multiplication and 32 bit addition
 */
 
-typedef struct poly1305_context {
-    size_t aligner;
-    unsigned char opaque[136];
-} poly1305_context;
-
 #if defined(_MSC_VER)
 	#define POLY1305_NOINLINE __declspec(noinline)
 #elif defined(__GNUC__)

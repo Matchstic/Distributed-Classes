@@ -18,7 +18,7 @@
  under the terms of the GNU Library General Public License.
  
  Refactored out of NSConnection.h
- Author: Matt Clarke (psymac)
+ Author: Matt Clarke <psymac@nottingham.ac.uk>
  Date: March 2017
 */
 

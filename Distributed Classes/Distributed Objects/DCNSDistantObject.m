@@ -31,12 +31,6 @@
 #import <Foundation/NSPort.h>
 #import "DCNSPortCoder.h"
 
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
-#import <Foundation/NSPortMessage.h>
-#else
-#import "NSPortMessage.h"
-#endif
-
 #import <Foundation/NSData.h>
 #import <Foundation/NSArray.h>
 #import <Foundation/NSDictionary.h>

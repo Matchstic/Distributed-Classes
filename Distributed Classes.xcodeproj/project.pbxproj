@@ -264,7 +264,6 @@
 			children = (
 				C92AD10E1E72EBAD0092FB38 /* Distributed Classes */,
 				C92AD10D1E72EBAD0092FB38 /* Products */,
-				C9BC80AE1E7322D400D28430 /* include */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,6 +280,7 @@
 		C92AD10E1E72EBAD0092FB38 /* Distributed Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C9BC80AE1E7322D400D28430 /* include */,
 				C92AD11E1E72EC0F0092FB38 /* Distributed Objects */,
 				C92AD1161E72EC0F0092FB38 /* Client */,
 				C92AD1381E72EC0F0092FB38 /* Server */,
