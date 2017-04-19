@@ -22,14 +22,14 @@
 
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
 #import <Foundation/NSPortMessage.h>
+#import <Foundation/NSHashTable.h>
+#import <Foundation/NSMapTable.h>
 #else
 #import "NSPortMessage.h"
 #import "NSMapTable.h" // For symbols.
 #import "NSHashTable.h" // For symbols.
 #endif
 
-#import <Foundation/NSHashTable.h>
-#import <Foundation/NSMapTable.h>
 #import <Foundation/NSData.h>
 #import <Foundation/NSMethodSignature.h>
 #import <Foundation/NSNotification.h>

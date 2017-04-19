@@ -1,5 +1,7 @@
 /*	NSMapTable.h
 	Copyright (c) 1994-2014, Apple Inc. All rights reserved.
+    
+    NOTE: DCNS
  */
 
 #import <Foundation/NSPointerFunctions.h>

@@ -4,6 +4,11 @@
 	based on the public domain reference version in supercop by djb
 */
 
+typedef struct poly1305_context {
+    size_t aligner;
+    unsigned char opaque[136];
+} poly1305_context;
+
 #if defined(_MSC_VER)
 	#define POLY1305_NOINLINE __declspec(noinline)
 #elif defined(__GNUC__)

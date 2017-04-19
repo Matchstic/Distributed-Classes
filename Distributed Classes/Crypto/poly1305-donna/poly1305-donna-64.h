@@ -2,6 +2,11 @@
 	poly1305 implementation using 64 bit * 64 bit = 128 bit multiplication and 128 bit addition
 */
 
+typedef struct poly1305_context {
+    size_t aligner;
+    unsigned char opaque[136];
+} poly1305_context;
+
 #if defined(_MSC_VER)
 	#include <intrin.h>
 
