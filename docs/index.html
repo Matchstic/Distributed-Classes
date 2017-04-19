@@ -48,9 +48,74 @@
 
 <p>Distributed Classes builds upon Distributed Objects to transparently allow multiple processes to share classes as if they were native to each process. These processes need not be running on the same machine, and can scale across networks.</p>
 
+<h1>Features</h1>
+
+<p>// TODO</p>
+
+<h1>Installation</h1>
+
+<p>You can integrate Distributed Classes into your project in a number of ways:</p>
+
+<ol>
+<li><p>Add via CocoaPods by adding:</p>
+
+<p> <code>pod "DistributedClasses"</code></p></li>
+</ol>
+
+
+<p>to your Podfile</p>
+
+<p>OR</p>
+
+<ol>
+<li>Link in an appropriate static library from the Release page, copying in the headers from the <code>include</code> directory.</li>
+</ol>
+
+
+<p>OR</p>
+
+<ol>
+<li>Copy the source code to somewhere in your project, and drag <code>Distributed Classes.xcodeproj</code> into your Xcode project.</li>
+</ol>
+
+
 <h1>Usage</h1>
 
-<h1>Features</h1>
+<p>Since this is a distributed system, you will need to initialise Distributed Classes in both the process acting as a server of classes, and the process acting as a client. Other than that, all you need to do to access a remote class in the client process is to reference it as follows:</p>
+
+<p><code>RemoteClass *object = [[$c(RemoteClass) alloc] init];</code></p>
+
+<p>With the main difference being the usage of <code>$c()</code>.</p>
+
+<p>Note that the following is for communication between processes on the <strong>same machine</strong>, which is only possible on macOS due to sandboxing on other platforms. The API is almost identical for communication inter-machine.</p>
+
+<p>To initialise the library in the <strong>client process</strong>, call:</p>
+
+<pre><code>NSError *error;
+NSString *serviceName = @"&lt;unique_name&gt;";
+[DCNSClient initialiseToLocalWithService:serviceName authenticationDelegate:auth andError:&amp;error];
+</code></pre>
+
+<p>Where:<br/>
+<code>auth</code> is either nil, or an object that responds to <code>DCNSConnectionDelegate</code>, to provide modular security.<br/>
+<code>error</code> will contain information about errors setting up the library, if any.<br/>
+<code>serviceName</code> is a unique name the server process makes classes available on.</p>
+
+<p>In the <strong>server process</strong>, call:</p>
+
+<pre><code>NSError *error;
+NSString *serviceName = @"&lt;unique_name&gt;";
+[DCNSServer initialiseAsLocalWithService:serviceName authenticationDelegate:auth andError:&amp;error];
+</code></pre>
+
+<p>Where:<br/>
+<code>auth</code> is either nil, or an object that responds to <code>DCNSConnectionDelegate</code>, to provide modular security.<br/>
+<code>error</code> will contain information about errors setting up the library, if any.<br/>
+<code>serviceName</code> is a unique name to make classes available on.</p>
+
+<p>And, that&rsquo;s it for a basic setup.</p>
+
+<p>Further options are provided, such as a global handler block for when transmission and other such errors arise. Please see the <a href="https://github.com/Matchstic/Distributed-Classes/wiki">Wiki</a> on how to configure those.</p>
 
 <h1>Supported Platforms</h1>
 
@@ -61,24 +126,24 @@
 </ul>
 
 
-<p>Please note that the limiting factor preventing support for e.g. GNUStep, mySTEP and WinObjC is mainly the library utilised for rebinding runtime symbols. Currently, this will only work for mach-o executables.</p>
-
 <h1>Known Limitations</h1>
 
 <ol>
 <li>Objective-C blocks cannot be proxied between processes</li>
 <li>C++ objects cannot be proxied between processes</li>
-<li>IPv4 is not supported when connecting to a specified hostname+port</li>
-<li>If the client or server process gets suspended when using the combined remote+local API, such as due to the user sleeping the device, the connection must be made again from scratch.</li>
-<li>There is no specific response if a message&rsquo;s encryption doesn&rsquo;t match what the remote expects.</li>
+<li>IPv4 is not supported when connecting to a specified hostname and port</li>
+<li>If the client or server process gets suspended when using the inter-machine API, such as due to the user sleeping the device, the connection must be made again from scratch.</li>
+<li>There is no specific response if the security module is different in the client process to the server process.</li>
 </ol>
 
 
-<h1>Known Bugs/Issues</h1>
+<p>In addition, the limiting factor preventing support for e.g. GNUStep, mySTEP and WinObjC, is mainly the library utilised for rebinding runtime symbols. Currently, this will only work for Mach-O executables.</p>
+
+<p>It&rsquo;s currently unknown if this library can be used in applications that are submitted to the App Store.</p>
 
 <h1>License</h1>
 
-<p>The GNU Lesser General Public License, v2.
+<p>The GNU Lesser General Public License, v2.1.<br/>
 See LICENSES.md for the licenses of external code used within this library.</p>
 						
 						
