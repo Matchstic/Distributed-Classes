@@ -36,7 +36,7 @@ Since this is a distributed system, you will need to initialise Distributed Clas
 
 With the main difference being the usage of ```$c()```.
 
-Note that the following is for communication between processes on the same machine, which is only possible on macOS due to sandboxing on other platforms.
+Note that the following is for communication between processes on the **same machine**, which is only possible on macOS due to sandboxing on other platforms. The API is almost identical for communication inter-machine.
 
 To initialise the library in the **client process**, call:
 
