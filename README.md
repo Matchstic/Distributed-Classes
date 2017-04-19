@@ -91,5 +91,5 @@ It's currently unknown if this library can be used in applications that are subm
 License
 ===================
 
-The GNU Lesser General Public License, v3.  
+The GNU Lesser General Public License, v2.1.  
 See LICENSES.md for the licenses of external code used within this library.
