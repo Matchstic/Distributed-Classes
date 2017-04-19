@@ -72,8 +72,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
- # s.source       = { :git => "https://github.com/Matchstic/Distributed-Classes.git", :tag => "#{s.version}" }
-  s.source       = { :git => "./", :tag => "#{s.version}" }
+  #s.source       = { :git => "https://github.com/Matchstic/Distributed-Classes.git", :tag => "#{s.version}" }
+  s.source       = { :git => "./" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -87,8 +87,10 @@ Pod::Spec.new do |s|
   s.source_files  = "Distributed\ Classes/**/*", "include/**/*"
   s.public_header_files = "include/**/*"
   
-  s.ios.prefix_header_contents = #define TARGET_OS_IPHONE 1
-  s.osx.prefix_header_contents = #define TARGET_OS_IPHONE 0
+  # s.ios.prefix_header_contents = #define TARGET_OS_IPHONE 1
+  # s.osx.prefix_header_contents = #define TARGET_OS_IPHONE 0
+  
+  s.osx.exclude_files = "**/Compatibility Headers/*"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
