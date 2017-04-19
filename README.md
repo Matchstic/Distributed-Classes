@@ -66,7 +66,7 @@ Where:
 
 And, that's it for a basic setup.
 
-Further options are provided, such as a global handler block for when transmission and other such errors arise. Please see the Wiki on how to configure those.
+Further options are provided, such as a global handler block for when transmission and other such errors arise. Please see the [Wiki](https://github.com/Matchstic/Distributed-Classes/wiki) on how to configure those.
 
 Supported Platforms
 ===================
