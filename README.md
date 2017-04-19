@@ -36,12 +36,14 @@ Since this is a distributed system, you will need to initialise Distributed Clas
 
 With the main difference being the usage of ```$c()```.
 
+Note that the following is for communication between processes on the same machine, which is only possible on macOS due to sandboxing on other platforms.
+
 To initialise the library in the **client process**, call:
 
 ```
 NSError *error;
 NSString *serviceName = @"<unique_name>";
-[DCNSClient initialiseToRemoteWithService:serviceName authenticationDelegate:auth andError:&error];
+[DCNSClient initialiseToLocalWithService:serviceName authenticationDelegate:auth andError:&error];
 ```
 
 Where:  
@@ -54,15 +56,13 @@ In the **server process**, call:
 ```
 NSError *error;
 NSString *serviceName = @"<unique_name>";
-int portNumber = 0;
-[DCNSServer initialiseAsRemoteWithService:serviceName portNumber:portNumber authenticationDelegate:auth andError:&error];
+[DCNSServer initialiseAsLocalWithService:serviceName authenticationDelegate:auth andError:&error];
 ```
 
 Where:  
 ```auth``` is either nil, or an object that responds to ```DCNSConnectionDelegate```, to provide modular security.  
 ```error``` will contain information about errors setting up the library, if any.  
 ```serviceName``` is a unique name to make classes available on.  
-```portNumber``` is the port number to publish ```serviceName``` on, with 0 causing an automatic choosing of a port.  
 
 And, that's it for a basic setup.
 
@@ -75,8 +75,6 @@ Supported Platforms
 - iOS 6.0 or higher (tested: 9.0 -> 10.2)
 - tvOS 9.0 or higher (not tested on-device)
 
-Please note that the limiting factor preventing support for e.g. GNUStep, mySTEP and WinObjC is mainly the library utilised for rebinding runtime symbols. Currently, this will only work for mach-o executables.
-
 Known Limitations
 ===================
 
@@ -86,16 +84,10 @@ Known Limitations
 4. If the client or server process gets suspended when using the combined remote+local API, such as due to the user sleeping the device, the connection must be made again from scratch.
 5. There is no specific response if a message's encryption doesn't match what the remote expects.
 
-Known Bugs/Issues
-===================
-
-
+In addition, the limiting factor preventing support for e.g. GNUStep, mySTEP and WinObjC is mainly the library utilised for rebinding runtime symbols. Currently, this will only work for Mach-O executables.
 
 License
 ===================
 
-The GNU Lesser General Public License, v2.
+The GNU Lesser General Public License, v3.  
 See LICENSES.md for the licenses of external code used within this library.
-
-
-
