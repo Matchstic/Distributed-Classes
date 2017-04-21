@@ -3,6 +3,8 @@ Distributed Classes
 
 Distributed Classes builds upon Distributed Objects to transparently allow multiple processes to share classes as if they were native to each process. These processes need not be running on the same machine, and can scale across networks.
 
+In a nutshell, provided you know the name of a class in one process, you can access it in another after setting up a connection between the two.
+
 Note that this library explores a technique of getting closer to allowing frictionless RPC.
 
 Features
