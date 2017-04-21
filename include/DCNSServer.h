@@ -18,6 +18,12 @@
 
 @class DCNSAbstractError;
 
+/**
+ * This class provides the API necessary to initialise the library in a server process.
+ *
+ * Some additional configuration is provided here, such as an adjustable timeout for transmission 
+ * of messages to a client.
+ */
 @interface DCNSServer : NSObject
 
 /**

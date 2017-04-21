@@ -10,8 +10,6 @@
 #import "DCNSConnection-Delegate.h"
 
 /**
- * @brief Provides basic access controls and/or encryption for message payloads.
- *
  * The general idea of this object is that it will implement some basic access controls,
  * which entail a username and password combo, along with providing some encryption to the
  * payload of each message.

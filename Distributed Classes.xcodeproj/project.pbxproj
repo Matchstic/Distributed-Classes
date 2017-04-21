@@ -209,6 +209,12 @@
 		C9A3DE4F1E859231005E49DF /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		C9A3DE501E859231005E49DF /* sha256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256.c; sourceTree = "<group>"; };
 		C9A3DE511E859231005E49DF /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha256.h; sourceTree = "<group>"; };
+		C9AB77FD1EAA52D700DE8C4B /* DCNSClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSClient.h; sourceTree = "<group>"; };
+		C9AB77FE1EAA52D700DE8C4B /* DCNSAbstractError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSAbstractError.h; sourceTree = "<group>"; };
+		C9AB77FF1EAA52D700DE8C4B /* DistributedClasses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistributedClasses.h; sourceTree = "<group>"; };
+		C9AB78011EAA52D700DE8C4B /* DCNSBasicAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSBasicAuthentication.h; sourceTree = "<group>"; };
+		C9AB78021EAA52D700DE8C4B /* DCNSConnection-Delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCNSConnection-Delegate.h"; sourceTree = "<group>"; };
+		C9AB78041EAA52D700DE8C4B /* DCNSServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSServer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +275,7 @@
 		C92AD10E1E72EBAD0092FB38 /* Distributed Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C9AB77FB1EAA52D700DE8C4B /* include */,
 				C92AD11E1E72EC0F0092FB38 /* Distributed Objects */,
 				C92AD1161E72EC0F0092FB38 /* Client */,
 				C92AD1381E72EC0F0092FB38 /* Server */,
@@ -449,6 +456,43 @@
 				C9A3DE511E859231005E49DF /* sha256.h */,
 			);
 			path = sha256;
+			sourceTree = "<group>";
+		};
+		C9AB77FB1EAA52D700DE8C4B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C9AB77FC1EAA52D700DE8C4B /* Client */,
+				C9AB77FE1EAA52D700DE8C4B /* DCNSAbstractError.h */,
+				C9AB77FF1EAA52D700DE8C4B /* DistributedClasses.h */,
+				C9AB78001EAA52D700DE8C4B /* Security */,
+				C9AB78031EAA52D700DE8C4B /* Server */,
+			);
+			path = include;
+			sourceTree = SOURCE_ROOT;
+		};
+		C9AB77FC1EAA52D700DE8C4B /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				C9AB77FD1EAA52D700DE8C4B /* DCNSClient.h */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		C9AB78001EAA52D700DE8C4B /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				C9AB78011EAA52D700DE8C4B /* DCNSBasicAuthentication.h */,
+				C9AB78021EAA52D700DE8C4B /* DCNSConnection-Delegate.h */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		C9AB78031EAA52D700DE8C4B /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				C9AB78041EAA52D700DE8C4B /* DCNSServer.h */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,6 +737,7 @@
 		C92AD1061E72EB7F0092FB38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
@@ -701,6 +746,7 @@
 		C92AD1071E72EB7F0092FB38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
@@ -804,7 +850,7 @@
 		C92AD2321E7300030092FB38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -841,6 +887,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -848,14 +895,15 @@
 				PRODUCT_NAME = DistributedClassesiOS;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = ./;
+				USER_HEADER_SEARCH_PATHS = "";
+				USE_HEADERMAP = YES;
 			};
 			name = Debug;
 		};
 		C92AD2331E7300030092FB38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -886,13 +934,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DistributedClassesiOS;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = ./;
+				USER_HEADER_SEARCH_PATHS = "";
+				USE_HEADERMAP = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -936,6 +986,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -979,6 +1030,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DistributedClassestvOS;

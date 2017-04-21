@@ -17,6 +17,11 @@
 @class NSData;
 @class NSArray;
 
+/**
+ * This protocol defines methods to be called on your own implementation of security within
+ * Distributed Classes. Typically, you will be asked to provide optional access controls
+ * in the form of authenticationData, and also to en-/decrypt data.
+ */
 @protocol DCNSConnectionDelegate <NSObject>
 
 @required

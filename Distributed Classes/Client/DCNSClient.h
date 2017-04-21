@@ -18,6 +18,15 @@
 
 @class DCNSAbstractError;
 
+/**
+ * This class provides the API necessary to initialise the library in a client process.
+ * 
+ * You will need to use the equivalent API that the server process used to initialise itself,
+ * i.e., initialiseTo { Local | Remote } as appropriate.
+ *
+ * Some additional configuration is provided here, such as the ability to provide a global error
+ * handler block, along with an adjustable timeout for transmission of messages to the server.
+ */
 @interface DCNSClient : NSObject
 
 #pragma mark Helper methods.
