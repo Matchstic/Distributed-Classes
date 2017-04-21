@@ -10,6 +10,7 @@
  Everything else from good guessing and inspecting data that is exchanged
  
  Updates to support cross-platform coding/decoding with iOS.
+ Updates to provide security such as encryption and access controls.
  Author: Matt Clarke <psymac@nottingham.ac.uk>
  Date: December 2016
  
@@ -460,7 +461,6 @@ const char *objc_skip_typespec(const char *type) {
 - (void)encodeValueOfObjCType:(const char *)type at:(const void *)address {
     // must encode in network byte order (i.e. bigendian)
     
-    // psymac :: We must also handle method encodings nicely, like const and byref.
     
 #if DEBUG_LOG_LEVEL>=2
     NSLog(@"DCNSPortCoder: -encodeValueOfObjCType:'%s' at:%p", type, address);
@@ -470,10 +470,12 @@ const char *objc_skip_typespec(const char *type) {
         case _C_VOID:
             return; // nothing to encode
         case _C_CONST:
-            // psymac :: Treat it as if there is no const.
+            
+            // mclarke :: Treat it as if there is no const.
             if (*type++ != '\0') {
                 [self encodeValueOfObjCType:type at:address];
             }
+            // END
             
             break;
         case _C_ID:	{
@@ -539,7 +541,7 @@ const char *objc_skip_typespec(const char *type) {
             NSMutableData *data = [_components objectAtIndex:0];
             
             // Test on PowerPC if we really swap or if we swap only when we decode from a different architecture
-            // psymac :: PPC is suitably old enough now (Nov 2016) to not worry too much about it.
+            // mclarke :: PPC is suitably old enough now (Nov 2016) to not worry too much about it.
             NSSwappedFloat val = NSSwapHostFloatToLittle(*(float *)address);
             
             char len = sizeof(float);
@@ -618,6 +620,7 @@ const char *objc_skip_typespec(const char *type) {
                 type = objc_skip_typespec(type);
             }
             break;
+            // mclarke :: Added for cross-platform compatibility.
         case 'B': {
             // C++ BOOL.
             [self _encodeInteger:*((bool *) address)];
@@ -731,8 +734,6 @@ const char *objc_skip_typespec(const char *type) {
  * FIXME: make robust
  * it must not be possible to create arbitraty objects (type check)
  * it must not be possible to overwrite arbitrary memory (code injection, buffer overflows)
- *
- * psymac :: securitah.
  */
 
 - (void)decodeValueOfObjCType:(const char *)type at:(void *)address {
@@ -747,10 +748,11 @@ const char *objc_skip_typespec(const char *type) {
             return;	// nothing to decode
         case _C_CONST:
             
-            // psymac :: Recursion to support const decoding.
+            // mclarke :: Recursion to support const decoding.
             if (*type++ != '\0') {
                 [self decodeValueOfObjCType:type at:address];
             }
+            // END
             
             break;
             
@@ -1045,9 +1047,10 @@ const char *objc_skip_typespec(const char *type) {
     NS_DURING
     
     // Get value
-    // psymac :: Added error checking on the return type's length.
+    // mclarke :: Added error checking on the return type's length.
     if (len > 0)
         [i getReturnValue:buffer];
+    // END
     
     NS_HANDLER
     
@@ -1077,7 +1080,7 @@ const char *objc_skip_typespec(const char *type) {
 
 - (NSInvocation *)decodeInvocation {
     /*
-     * psymac
+     * mclarke
      *
      * Ideally, here we would implement -initWithCoder on NSInvocation, which would be able
      * to nicely init a new NSInvocation from incoming data.
@@ -1249,6 +1252,12 @@ const char *objc_skip_typespec(const char *type) {
     [self encodeObject:obj];
 }
 
+/*
+ * mclarke
+ *
+ * The vast majority of my additions to this class are to be found in the below methods.
+ */
+
 - (void)authenticateWithDelegate:(id<DCNSConnectionDelegate>)delegate withSessionKey:(char*)key {
     if (delegate && [delegate respondsToSelector:@selector(authenticationDataForComponents:andSessionKey:)]) {
         NSData *data = [delegate authenticationDataForComponents:[self components] andSessionKey:key];
@@ -1268,7 +1277,7 @@ const char *objc_skip_typespec(const char *type) {
         unsigned int len = (unsigned int)[components count];
         
         /*
-         * psymac
+         * mclarke
          *
          * For most authentication requests, there will only be two components - data, and credentials.
          */
@@ -1288,7 +1297,7 @@ const char *objc_skip_typespec(const char *type) {
 
 -(void)decryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key {
     /*
-     * psymac
+     * mclarke
      *
      * Encrypted starts at an offset AFTER the flag and sequence number;
      * Data from this point is likely to be encrypted if there's a delegate, so we will
@@ -1325,7 +1334,7 @@ const char *objc_skip_typespec(const char *type) {
 
 -(void)encryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key {
     /*
-     * psymac
+     * mclarke
      *
      * At this point, we will also request the delegate to encrypt the data from components[0] at
      * an offset AFTER the flag and sequence number.
@@ -1459,6 +1468,8 @@ const char *objc_skip_typespec(const char *type) {
     return [super replacementObjectForPortCoder:coder];
 }
 
+// mclarke :: Changes to correctly encode/decode NSData
+
 - (void)_encodeWithPortCoder:(NSCoder *)coder {
     const void *bytes = [self bytes];
     unsigned int len = (unsigned int)[self length];
@@ -1481,6 +1492,8 @@ const char *objc_skip_typespec(const char *type) {
     
     return self;
 }
+
+// END
 
 @end
 

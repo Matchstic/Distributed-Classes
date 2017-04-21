@@ -14,6 +14,10 @@
     Author:	Fabian Spillner <fabian.spillner@gmail.com>
     Date:	28. April 2008 - aligned with 10.5
  
+    Refactored for usage as standalone Distributed Objects
+    Matt Clarke <psymac@nottingham.ac.uk>
+    Date: November 2016
+ 
     This file is part of the mySTEP Library and is provided
     under the terms of the GNU Library General Public License.
 */

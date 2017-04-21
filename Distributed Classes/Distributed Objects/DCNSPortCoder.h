@@ -65,11 +65,11 @@ typedef double NSTimeInterval;
 - (id)decodeRetainedObject;
 - (void)encodeObject:(id)obj isBycopy:(BOOL)isBycopy isByref:(BOOL)isByref;
 
-// Security extensions.
+// mclarke :: Security extensions.
 - (void)authenticateWithDelegate:(id<DCNSConnectionDelegate>)delegate withSessionKey:(char*)key;
 - (BOOL)verifyWithDelegate:(id<DCNSConnectionDelegate>)delegate withSessionKey:(char*)key;
-- (void)decryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key; // psymac
-- (void)encryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key; // psymac
+- (void)decryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key;
+- (void)encryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key;
 @end
 
 @interface NSObject (NSPortCoder)

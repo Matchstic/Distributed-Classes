@@ -123,6 +123,7 @@
     }
 }
 
+// mclarke
 + (char*)convertToKey:(int)input {
     char *buf = calloc(33, sizeof(char));
     sprintf(buf, "%x", input);

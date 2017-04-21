@@ -12,6 +12,11 @@
  
     Fabian Spillner, July 2008 - API revised to be compatible to 10.5
  
+    Refactored for use as standalone Distributed Objects
+    Improvements to searching for services over NSNetServices.
+    Author: Matt Clarke (psymac)
+    Date: November 2016
+ 
     This file is part of the mySTEP Library and is provided
     under the terms of the GNU Library General Public License.
 */

@@ -14,6 +14,8 @@
  
  Refactored for use as standalone Distributed Objects
  Improvements to searching for services over NSNetServices.
+ Note that to provide the above improvements, the vast majority of this 
+ class has been rewritten.
  Author: Matt Clarke (psymac)
  Date: November 2016
  
@@ -110,7 +112,7 @@ static DCNSSocketPortNameServer *defaultServer;
         host = @"local"; // Resolve in default domains.
     else {
         /*
-         * psymac
+         * mclarke
          *
          * If the host is NOT "local", we are connecting to a remote host.
          *
@@ -195,7 +197,7 @@ static DCNSSocketPortNameServer *defaultServer;
     
     [ns setDelegate:self];
     
-    // Enable p2p if possible. This does over WiFi and Bluetooth. Pretty cool huh.
+    // mclarke :: Enable p2p if possible. This does over WiFi and *Bluetooth*.
     // Available on iOS 7+ and OS X 10.10+
     // CHECKME: Does this affect performance?
     if ([ns respondsToSelector:@selector(setIncludesPeerToPeer:)]) {
@@ -209,7 +211,7 @@ static DCNSSocketPortNameServer *defaultServer;
     CFAbsoluteTime now = time(NULL);
     int diff = 0;
     
-    // psymac :: Keep alive until the timeout is done, or we have an address.
+    // mclarke :: Keep alive until the timeout is done, or we have an address.
     NSLog(@"NSSocketPortNameServer :: Searching for port with name: \"%@\" ...", name);
     while (diff < timeout) {
         // If found an address, break now!
@@ -263,7 +265,7 @@ static DCNSSocketPortNameServer *defaultServer;
     if (!s)
         return NO;
     
-    // Enable p2p if possible. This does over WiFi and Bluetooth. Pretty cool huh.
+    // mclarke :: Enable p2p if possible. This does over WiFi and Bluetooth.
     if ([s respondsToSelector:@selector(setIncludesPeerToPeer:)]) {
         s.includesPeerToPeer = YES;
     }

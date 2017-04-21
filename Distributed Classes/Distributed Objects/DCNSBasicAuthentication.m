@@ -1,6 +1,6 @@
 //
 //  DCNSBasicAuthentication.m
-//  Local Client
+//  Distributed Classes
 //
 //  Created by Matt Clarke on 07/03/2017.
 //  Copyright © 2017 Matt Clarke. All rights reserved.

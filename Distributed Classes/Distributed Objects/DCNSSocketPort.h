@@ -10,11 +10,9 @@
 //
 
 /*
- * psymac
+ * Header generated from a class dump of Apple's NSSocketPort from macOS 10.11.3
  * 
- * Class dump of Apple's NSSocketPort from macOS 10.11.3
- * 
- * This is used as a basis of all functions to implement. Some have been omitted as they should not 
+ * This is used as a basis of all methods to implement. Some have been omitted as they should not
  * be present in the header, but are required in the implementation.
  */
 
@@ -75,7 +73,7 @@ typedef CFStringRef CFRunLoopMode;
 // Overriden getters.
 - (BOOL)isValid;
 
-// New stuff - should this be here?
+// New stuff - should this be in the header?
 + (BOOL)sendBeforeTime:(double)arg1 streamData:(id)arg2 components:(NSArray*)arg3 to:(NSPort*)arg4 from:(NSPort*)arg5 msgid:(unsigned int)arg6 reserved:(unsigned long long)arg7;
 - (BOOL)sendBeforeTime:(double)arg1 streamData:(void *)arg2 components:(NSArray*)arg3 from:(NSPort*)arg4 msgid:(unsigned int)arg5;
 

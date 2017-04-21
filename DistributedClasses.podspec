@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DistributedClasses"
-  s.version      = "0.0.1"
+  s.version      = "0.1"
   s.summary      = "Share classes between multiple processes with ease."
 
   # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   These processes need not be running on the same machine, and can scale across networks.
                    DESC
 
-  s.homepage     = "https://github.com/Matchstic/Distributed-Classes"
+  s.homepage     = "http://incendo.ws/projects/Distributed-Classes"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -24,7 +24,11 @@
  Date: May 2012
  Debugged to be more compatible to Cocoa
  
- Heavily reworked for usage as standalone Distributed Objects
+ Heavily refactored for usage as standalone Distributed Objects.
+ Added support for modular security
+ Provided acknowledgement reciepts for data re-transmission
+ Provided full multi-threading support
+ Note that we now diverge from feature parity with Cocoa.
  Author: Matt Clarke <psymac@nottingham.ac.uk>
  Date: April 2017
  
@@ -77,7 +81,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Defines
 
-#define FLAGS_INTERNAL	0x0e2ffee2 // Won't be used by the DC system
+#define FLAGS_INTERNAL	0x0e2ffee2
 #define FLAGS_REQUEST	0x0e1ffeed
 #define FLAGS_RESPONSE	0x0e2ffece
 #define FLAGS_ACK	    0x0e5ffefe
@@ -85,8 +89,6 @@
 // Utilised when negotiating a session key.
 #define FLAGS_DH_REQUEST 0x0e3ffeed
 #define FLAGS_DH_RESPONSE 0x0e4ffece
-
-
 
 // Default timeout used for timing out transmission of data (in seconds)
 #define DEFAULT_TRANSMISSION_TIMEOUT 10.0
@@ -652,6 +654,12 @@ static unsigned int _sequence;
     return _rootObject;
 }
 
+/*
+ * mclarke
+ *
+ * The below two methods are represent the initial connection establishment.
+ */
+
 -(int)dhkexBWithGenerator:(int)g modulus:(int)p andA:(int)A {
     // We generate our B value and calculate the shared key for this session.
     
@@ -864,6 +872,8 @@ static unsigned int _sequence;
 }
 
 /*
+ * mclarke
+ *
  * With regards to the _responses map, there is the potential for 2 entries for a given sequence number
  * due to the Ack sub-system. Thus, we should probably drop an entry if its not accessed within the timeout
  * specified for reply/request. Note that this doubling of entries won't affect performance other than taking
@@ -1073,6 +1083,8 @@ static unsigned int _sequence;
     @autoreleasepool {
     
     /*
+     * mclarke
+     *
      * Before we go any further, we should request the delegate to decrypt the first set of components.
      * The initial two unsigned int however will NOT be encrypted, so that we can effectively work with
      * them as needed.

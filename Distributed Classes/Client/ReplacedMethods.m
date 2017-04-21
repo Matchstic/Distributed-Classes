@@ -1,13 +1,15 @@
 //  ReplacedMethods.m
 //  Distributed Classes
 //
-//  Provides the appropriate hooks into the ObjC runtime to facilitate providing the features we want.
+//  Provides the appropriate hooks into the Objective-C runtime to facilitate providing the features we want.
 //  Originally, the plan was to utilise Jay Freeman's 'Cydia Substrate' framework to achieve the hooking
 //  required, though Facebook's 'fishhook' does the job perfectly.
 //
 //  After initialising, everything will work transparently. Just work with Objective-C objects as usual,
 //  and this library will do the heavy lifting. Unfortunately, C++ objects are not supported yet (can we
 //  do some sort of fancy pass-by-reference?).
+//
+//  It's likely not an understatement to say the entire library depends upon the code present here.
 //
 //  Created by Matt Clarke on 01/03/2016.
 //  Copyright © 2017 Matt Clarke. All rights reserved.

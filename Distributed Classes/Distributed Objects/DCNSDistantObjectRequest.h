@@ -29,8 +29,7 @@
 @class NSException;
 @class NSMutableArray;
 
-@interface DCNSDistantObjectRequest : NSObject
-{
+@interface DCNSDistantObjectRequest : NSObject {
     DCNSConnection *_connection;
     NSInvocation *_invocation;
     id _conversation;
