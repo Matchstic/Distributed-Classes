@@ -23,13 +23,9 @@ You can integrate Distributed Classes into your project in a number of ways:
     
 to your Podfile
 
-OR
-
 2. Link in an appropriate static library from the Release page, copying in the headers from the ```include``` directory.
 
-OR
-
-3. Copy the source code to somewhere in your project, and drag ```Distributed Classes.xcodeproj``` into your Xcode project.
+3. Clone this repository (or add as a submodule if you're feeling adventurous) to somewhere in your project, and drag ```Distributed Classes.xcodeproj``` into your Xcode project.
 
 Usage
 ===================
