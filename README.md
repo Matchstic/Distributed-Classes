@@ -5,7 +5,7 @@ Distributed Classes builds upon Distributed Objects to transparently allow multi
 
 In a nutshell, provided you know the name of a class in one process, you can access it in another after setting up a connection between the two.
 
-Note that this library explores a technique of getting closer to allowing frictionless RPC.
+This library explores the technique of proxying class defintions, rather than instances of a class.
 
 Features
 ===================
