@@ -13,7 +13,7 @@
 #import "DCNSCrypto.h"
 
 /**
- @brief Passes data through without applying any encryption.
+ Passes data through without applying any encryption.
  */
 @interface DCCryptoPassthrough : NSObject <DCNSCrypto>
 

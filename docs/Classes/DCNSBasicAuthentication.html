@@ -110,7 +110,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<div class="warning"><p><strong>Warning:</strong> Be aware that authentication of access controls will occur for each message recieved/sent.</p></div><div class="warning"><p><strong>Warning:</strong> Passwords sent for access controls will NOT be one-way hashed. It is expected for the user to do this.</p></div>
+						<p>The general idea of this object is that it will implement some basic access controls,
+which entail a username and password combo, along with providing some encryption to the
+payload of each message.</p>
+
+<p>It is expected for the user to provide their own authentication modules, as this
+will allow for implementing more secure access controls; both to authenticate the
+client to the server, and the server&rsquo;s responses to the client.</p><div class="warning"><p><strong>Warning:</strong> Be aware that authentication of access controls will occur for each message recieved/sent.</p></div><div class="warning"><p><strong>Warning:</strong> Passwords sent for access controls will NOT be one-way hashed. It is expected for the user to do this.</p></div>
 					</div>
 					
 					
@@ -121,89 +127,11 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						
-						
+						<a title="Initialisation" name="task_Initialisation"></a>
+						<h2 class="task-title">Initialisation</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/encryptionMode" title="encryptionMode"></a>
-	<h3 class="method-title"><code><a href="#//api/name/encryptionMode">&nbsp;&nbsp;encryptionMode</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Specifies which mode of encryption to use on messages.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) DCNSBasicEncryptionMode encryptionMode</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">DCNSBasicAuthentication.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/useMessageAuthentication" title="useMessageAuthentication"></a>
-	<h3 class="method-title"><code><a href="#//api/name/useMessageAuthentication">&nbsp;&nbsp;useMessageAuthentication</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Toggles the use of Poly1305 to authenticate decrypted messages.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) BOOL useMessageAuthentication</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">DCNSBasicAuthentication.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/createAuthenticationModuleWithUsername:andPassword:" title="createAuthenticationModuleWithUsername:andPassword:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/createAuthenticationModuleWithUsername:andPassword:">+&nbsp;createAuthenticationModuleWithUsername:andPassword:</a></code>
 </h3>
@@ -390,6 +318,92 @@ any form of access control, and the key used to encrypt data is the session key 
 </div>
 						</div>
 						
+
+						<a title="Configuration" name="task_Configuration"></a>
+						<h2 class="task-title">Configuration</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/encryptionMode" title="encryptionMode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/encryptionMode">&nbsp;&nbsp;encryptionMode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Specifies which mode of encryption to use on messages. By default, this is ChaCha20.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) DCNSBasicEncryptionMode encryptionMode</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">DCNSBasicAuthentication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/useMessageAuthentication" title="useMessageAuthentication"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useMessageAuthentication">&nbsp;&nbsp;useMessageAuthentication</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Toggles the use of Poly1305 to authenticate decrypted messages. By default, this is enabled.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) BOOL useMessageAuthentication</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">DCNSBasicAuthentication.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
 					</div>
 					
 					
@@ -402,7 +416,7 @@ any form of access control, and the key used to encrypt data is the session key 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Matt Clarke. All rights reserved. Updated: 2017-04-19</p>
+						<p class="copyright">Copyright &copy; 2017 Matt Clarke. All rights reserved. Updated: 2017-04-23</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

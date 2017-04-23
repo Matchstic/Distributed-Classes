@@ -129,7 +129,7 @@ static NSLock *_DCNSAckLock;
 static dispatch_semaphore_t _DCNSReceiveScheduleSem;
 
 // A cache of known connections that are currently instiantated.
-// This could/should use a NSMapTable keyed by a combination of receivePort and sendPort (e.g. string catenation)
+// This could/should use a NSMapTable keyed by a combination of receivePort and sendPort (e.g. string concatenation)
 // Speed issues causes by this might be visible on server reponses time with multiple clients.
 static NSHashTable *_allConnections;
 
@@ -705,11 +705,6 @@ static unsigned int _sequence;
     NSLog(@"root proxy: %@", proxy);
 #endif
     
-    // If the rootProxy actually exists, we can assume that authentication was successful.
-    if (nil != proxy) {
-        _sessionIsAuthenticated = YES;
-    }
-    
     return proxy;
 }
 
@@ -941,7 +936,7 @@ static unsigned int _sequence;
         NSException *ex;
         
 #if DEBUG_LOG_LEVEL>=2
-        NSLog(@"*** (conn=%p) waiting for response before %@ in runloop %@ from %@ (%u)", self, [NSDate dateWithTimeIntervalSinceNow:_replyTimeout], rl, _receivePort, [_receivePort machPort]);
+        NSLog(@"*** (conn=%p) waiting for response before %@ in runloop %@ from %@ (%u)", self, [NSDate dateWithTimeIntervalSinceNow:self.transmissionTimeout], rl, _receivePort, [_receivePort machPort]);
 #endif
         
         // Loop until we can extract a matching response for our sequence number from the receive queue...
@@ -1503,10 +1498,10 @@ static unsigned int _sequence;
         
 #if DEBUG_LOG_LEVEL>=2
         // CHECKME: is this timeout correct? We are sending a reply...
-        NSLog(@"replyTimeout=%f", _replyTimeout);
+        NSLog(@"replyTimeout=%f", self.transmissionTimeout);
         NSLog(@"timeIntervalSince1970=%f", [[NSDate date] timeIntervalSince1970]);
         NSLog(@"timeIntervalSinceRefDate=%f", [[NSDate date] timeIntervalSinceReferenceDate]);
-        NSLog(@"time=%f", [NSDate timeIntervalSinceReferenceDate]+_replyTimeout);
+        NSLog(@"time=%f", [NSDate timeIntervalSinceReferenceDate]+self.transmissionTimeout);
 #endif
         
 #if DEBUG_LOG_LEVEL>=1
@@ -1539,6 +1534,7 @@ static unsigned int _sequence;
 
 - (BOOL)_shouldDispatch:(id *)conversation invocation:(NSInvocation *)invocation sequence:(unsigned int)seq coder:(NSCoder *)coder {
     /*
+     * mclarke
      * I have fully stripped out the toggle for independant conversation queuing.
      */
     
@@ -1569,6 +1565,7 @@ static unsigned int _sequence;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Private methods to handle caching of remote/local proxies
+// mclarke :: These remain unchanged from mySTEP.
 
 @implementation DCNSConnection (NSPrivate)
 

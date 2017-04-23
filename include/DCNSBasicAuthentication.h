@@ -10,25 +10,23 @@
 #import "DCNSConnection-Delegate.h"
 
 /**
- * The general idea of this object is that it will implement some basic access controls,
- * which entail a username and password combo, along with providing some encryption to the
- * payload of each message.
- *
- * It is expected for the user to provide their own authentication modules, as this
- * will allow for implementing more secure access controls; both to authenticate the
- * client to the server, and the server's responses to the client.
- *
- * @warning Be aware that authentication of access controls will occur for each message recieved/sent.
- * @warning Passwords sent for access controls will NOT be one-way hashed. It is expected for the user to do this.
+ The general idea of this object is that it will implement some basic access controls,
+ which entail a username and password combo, along with providing some encryption to the
+ payload of each message.
+ 
+ It is expected for the user to provide their own authentication modules, as this
+ will allow for implementing more secure access controls; both to authenticate the
+ client to the server, and the server's responses to the client.
+ 
+ @warning Be aware that authentication of access controls will occur for each message recieved/sent.
+ @warning Passwords sent for access controls will NOT be one-way hashed. It is expected for the user to do this.
  */
 @interface DCNSBasicAuthentication : NSObject <DCNSConnectionDelegate>
 
 /**
- @typedef DCNSBasicEncryptionMode
- @brief Available encryption modes
- @discussion A series of available modes of encryption that have been implemented here.
+ A series of available modes of encryption that have been implemented here.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, DCNSBasicEncryptionMode) {
     /** No encryption */
     kDCNSBasicEncryptionNone,
     
@@ -40,20 +38,9 @@ typedef enum {
     
     /** ChaCha20, as described in: https://tools.ietf.org/html/rfc7539 */
     kDCNSBasicEncryptionChaCha
-} DCNSBasicEncryptionMode;
+};
 
-/**
- @property encryptionMode
- @brief Specifies which mode of encryption to use on messages.
- @see DCNSBasicEncryptionMode
- */
-@property (nonatomic, readwrite) DCNSBasicEncryptionMode encryptionMode;
-
-/**
- @property useMessageAuthentication
- @brief Toggles the use of Poly1305 to authenticate decrypted messages.
- */
-@property (nonatomic, readwrite) BOOL useMessageAuthentication;
+/** @name Initialisation */
 
 /**
  Creates a new authentication module that will have the username and password fields checked on the server.
@@ -84,5 +71,18 @@ typedef enum {
  @return Initialised module
  */
 +(instancetype)createAuthenticationModuleWithTransportEncryptionOnly:(DCNSBasicEncryptionMode)mode;
+
+/** @name Configuration */
+
+/**
+ @brief Specifies which mode of encryption to use on messages. By default, this is ChaCha20.
+ @see DCNSBasicEncryptionMode
+ */
+@property (nonatomic, readwrite) DCNSBasicEncryptionMode encryptionMode;
+
+/**
+ @brief Toggles the use of Poly1305 to authenticate decrypted messages. By default, this is enabled.
+ */
+@property (nonatomic, readwrite) BOOL useMessageAuthentication;
 
 @end

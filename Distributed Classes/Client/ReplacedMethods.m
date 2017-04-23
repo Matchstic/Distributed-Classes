@@ -28,7 +28,8 @@
 
 #include "ReplacedMethods.h"
 
-#pragma Interfaces etc
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma Interface Definitions
 
 struct objc_method {
     SEL method_name;
@@ -44,10 +45,12 @@ struct objc_method {
 -(MethodProxy*)class_getClassMethod:(ClassRepresentation*)class andSelector:(SEL)selector;
 @end
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Static variables
 
 static Class distantObjectClass;
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Function definitions
 
 // Classes
@@ -85,9 +88,12 @@ static char* (*orig_method_copyArgumentType)(Method meth, unsigned int index);
 static void (*orig_method_getArgumentType)(Method meth, unsigned int index, char *dst, size_t dst_len);
 static void (*orig_method_getReturnType)(Method meth, char *dst, size_t dst_len);
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Class Definition Functions
 
 /*
+ * Potential candidates for interposing
+ 
  objc_lookUpClass(const char *name)
  objc_getRequiredClass(const char *name)
  objc_getClassList(Class *buffer, int bufferCount)
@@ -105,9 +111,12 @@ Class new_objc_getClass(const char* name) {
     return result;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Instance Functions
 
 /*
+ * Potential candidates for interposing
+ 
  object_setClass(id obj, Class cls)
  object_isClass(id obj)
  object_getClassName(id obj)
@@ -125,6 +134,8 @@ Class new_object_getClass(id object) {
 #pragma mark Class Functions
 
 /*
+ * Potential candidates for interposing
+ 
  class_getName(Class cls)
  class_isMetaClass(Class cls)
  class_getSuperclass(Class cls)
@@ -158,6 +169,7 @@ Method new_class_getClassMethod(Class aClass, SEL aSelector) {
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Method functions
 
 BOOL isMethodProxy(Method test) {
@@ -281,6 +293,9 @@ void new_method_getReturnType(Method meth, char *dst, size_t dst_len) {
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark Initialisation functions
+
 int dcns_common_configure(DCNSConnection *connection, id<DCNSConnectionDelegate> delegate) {
     /* 
      * First, sanity check.
@@ -336,15 +351,7 @@ int dcns_common_configure(DCNSConnection *connection, id<DCNSConnectionDelegate>
     return 0;
 }
 
-/**
- * Initialises the client-side of Distributed Classes to a remote server.
- @discussion If you wish to connect to a device on the local network, it may be easier to simply pass nil and 0 for `host` and `portNum` respectively. This allows Bonjour to automatically find the service requested via multicast DNS.
- @param service The unique name of the service to connect to.
- @discussion IPv4 is a ridiculous nightmare; specify `host` via an IPv6 address if going for dotted notation. In addition, my code will only attempt to resolve an IPv6 address for unknown hosts.
- @param host The hostname of the server to connect to. Passing nil searches for `service` via Bonjour in the local domain.
- @param portNum The port number the remote server is listening on. Only used if `host` is non-NULL.
- @return Non-zero is an error.
- */
+
 int initialiseDistributedClassesClientToRemote(NSString *service, NSString *host, unsigned int portNum, id<DCNSConnectionDelegate> delegate) {
     // Setup
     DCNSConnection *connection = [DCNSConnection connectionWithRegisteredName:service host:host usingNameServer:[DCNSSocketPortNameServer sharedInstance] portNumber:portNum];
@@ -353,11 +360,6 @@ int initialiseDistributedClassesClientToRemote(NSString *service, NSString *host
     return dcns_common_configure(connection, delegate);
 }
 
-/**
- * Initialises the client-side of Distributed Classes to localhost.
- @param service The unique name of the service to connect to.
- @return Non-zero is an error.
- */
 int initialiseDistributedClassesClientToLocal(NSString *service, id<DCNSConnectionDelegate> delegate) {
     DCNSConnection *connection = [DCNSConnection connectionWithRegisteredName:service host:nil usingNameServer:[NSPortNameServer systemDefaultPortNameServer] portNumber:0];
     

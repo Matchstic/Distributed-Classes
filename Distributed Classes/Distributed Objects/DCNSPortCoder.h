@@ -55,6 +55,13 @@ typedef double NSTimeInterval;
 
 @end
 
+@interface DCNSPortCoder (Security)
+- (void)authenticateWithDelegate:(id<DCNSConnectionDelegate>)delegate withSessionKey:(char*)key;
+- (BOOL)verifyWithDelegate:(id<DCNSConnectionDelegate>)delegate withSessionKey:(char*)key;
+- (void)decryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key;
+- (void)encryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key;
+@end
+
 @interface DCNSPortCoder (NSConcretePortCoder)
 - (void)invalidate;
 - (NSArray *)components;
@@ -64,12 +71,6 @@ typedef double NSTimeInterval;
 - (void)decodeReturnValue:(NSInvocation *)i;
 - (id)decodeRetainedObject;
 - (void)encodeObject:(id)obj isBycopy:(BOOL)isBycopy isByref:(BOOL)isByref;
-
-// mclarke :: Security extensions.
-- (void)authenticateWithDelegate:(id<DCNSConnectionDelegate>)delegate withSessionKey:(char*)key;
-- (BOOL)verifyWithDelegate:(id<DCNSConnectionDelegate>)delegate withSessionKey:(char*)key;
-- (void)decryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key;
-- (void)encryptComponentsWithDelegate:(id<DCNSConnectionDelegate>)delegate andSessionKey:(char*)key;
 @end
 
 @interface NSObject (NSPortCoder)

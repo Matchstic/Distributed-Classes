@@ -16,7 +16,7 @@
  Improvements to searching for services over NSNetServices.
  Note that to provide the above improvements, the vast majority of this 
  class has been rewritten.
- Author: Matt Clarke (psymac)
+ Author: Matt Clarke <psymac@nottingham.ac.uk>
  Date: November 2016
  
  This file is part of the mySTEP Library and is provided

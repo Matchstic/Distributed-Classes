@@ -13,47 +13,49 @@
 
 @class NSString;
 
+/**
+ * DCNSAbstractError encapuslates data about an error to be passed into the global error
+ * handler block. This includes the method name and class it occured in, along with
+ * any other pertinent information.
+ *
+ * Future updates will see subclasses of this class given to the error handler instead,
+ * which will be specific to error types; i.e. timeouts, encoding issues etc.
+ */
 @interface DCNSAbstractError : NSObject {
     NSString *_calleeClass;
     NSString *_calleeMethod;
 }
 
+/** @name Datums */
+
 /**
- @property name
  The name of the error; analagous to the name of an exception.
  */
 @property (nonatomic, readonly) NSString *name;
 
 /**
- @property name
  The reason why the error occured.
  */
 @property (nonatomic, readonly) NSString *reason;
 
 /**
- @property callStackSymbols
  The methods called leading up to the error occuring.
  */
 @property (nonatomic, readonly) NSArray *callStackSymbols;
 
 /**
- @property calleeMethod
  The method where the call to a remote method occurred.
  */
 @property (nonatomic, readonly) NSString *calleeMethod;
 
 /**
- @property calleeClass
  The class where the call to a remote method occurred.
  */
 @property (nonatomic, readonly) NSString *calleeClass;
 
 /**
- @property userInfo
  Any additional user information associated with the error.
  */
 @property (nonatomic, readonly) NSDictionary *userInfo;
-
--(instancetype)initWithName:(NSString*)name reason:(NSString*)reason callStackSymbols:(NSArray*)callStackSymbols andUserInfo:(NSDictionary*)userinfo;
 
 @end

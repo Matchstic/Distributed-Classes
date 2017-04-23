@@ -29,25 +29,80 @@
 @class NSMutableDictionary;
 
 /**
- @brief Proxies messages to a given "real" object, whether in the local process or remote.
- 
+ Proxies messages to a given "real" object, whether in the local process or remote.
  */
 @interface DCNSDistantObject : NSProxy  <NSCoding> {
-	DCNSConnection *_connection;	// retained for local objects
-	id _local;	// retained dependent object if we are a local proxy
-	unsigned int _remote;	// reference address/number (same on both sides)
-	Protocol *_protocol;
-	NSMutableDictionary *_selectorCache;	// cache the method signatures we have asked for
+	DCNSConnection *_connection;	        // retained for local objects
+	id _local;	                            // retained dependent object if we are a local proxy
+	unsigned int _remote;	                // reference address/number (same on both sides)
+	Protocol *_protocol;                    // the protocol the proxied object responds to, if available.
+	NSMutableDictionary *_selectorCache;	// caches the method signatures we have asked for
 }
 
+/** Creating the Proxy */
+
+/**
+ Creates a proxy to an local object in the current process.
+ @param anObject The object to proxy to.
+ @param aConnection The connection which is requesting this proxy be created.
+ @return A proxy to the local object
+ */
 + (instancetype)proxyWithLocal:(id)anObject connection:(DCNSConnection *)aConnection;
+
+/**
+ Creates a proxy to an object in the remote process.
+ @param anObject The reference number of the object to proxy to.
+ @param aConnection The connection which is requesting this proxy be created.
+ @return A proxy to the remote object
+ */
 + (instancetype)proxyWithTarget:(id)anObject connection:(DCNSConnection *)aConnection;
+
+/**
+ Creates a proxy object from serialised data, typically received from the remote connection.
+ @param arg1 The NSCoder class that contains the serialised data
+ @return A proxy to an object
+ */
 + (instancetype) newDistantObjectWithCoder:(NSCoder *) arg1;
 
+/** @name Datums */
+
+/**
+ Gives the connection that initially created this proxy object.
+ @return The connection that created this proxy.
+ */
 - (DCNSConnection *)connectionForProxy;
-- (id)initWithLocal:(id) anObject connection:(DCNSConnection *)aConnection;
-- (id)initWithTarget:(unsigned int) anObject connection:(DCNSConnection *)aConnection;
-- (void)setProtocolForProxy:(Protocol *)aProtocol;
+
+/**
+ Gives the protocol that the real object responds to. By default, this is not set, and is wholly optional.
+ @return The protocol the real object responds to.
+ */
 - (id) protocolForProxy;
+
+/**
+ Sets the protocol the real object should respond to. This should be of type Protocol.<br/>
+ Note that by setting this, the proxy will no longer request method signatures from the real object, as they are set by the protocol. As a result, if a method not in the protocol is called, an exception will be raised.
+ @param aProtocol The protocol the real object should respond to.
+ */
+- (void)setProtocolForProxy:(Protocol *)aProtocol;
+
+/** @name Extra Lifecycle Methods */
+
+/**
+ Inits a proxy object to a local real object.
+ @param anObject The object to proxy to.
+ @param aConnection The connection which is requesting this proxy be created.
+ @return A proxy to the local object
+ */
+- (instancetype)initWithLocal:(id) anObject connection:(DCNSConnection *)aConnection;
+
+/**
+ Inits a proxy to an object in the remote process.
+ @param anObject The reference number of the object to proxy to.
+ @param aConnection The connection which is requesting this proxy be created.
+ @return A proxy to the remote object
+ */
+- (instancetype)initWithTarget:(unsigned int) anObject connection:(DCNSConnection *)aConnection;
+
+
 
 @end

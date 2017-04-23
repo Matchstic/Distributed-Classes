@@ -338,7 +338,7 @@ const char *objc_skip_typespec(const char *type) {
     int size = objc_sizeof_type(type);
     
 #if DEBUG_LOG_LEVEL>=2
-    NSLog(@"DCNSPortCoder: -encodeArrayOfObjCType %s count %d size %d", type, count, size);
+    NSLog(@"DCNSPortCoder: -encodeArrayOfObjCType %s count %lu size %d", type, (unsigned long)count, size);
 #endif
     
     // FIXME: handle alignment

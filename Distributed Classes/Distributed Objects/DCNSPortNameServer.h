@@ -14,7 +14,9 @@
  
     Refactored for use as standalone Distributed Objects
     Improvements to searching for services over NSNetServices.
-    Author: Matt Clarke (psymac)
+    Note that to provide the above improvements, the vast majority of this
+    class has been rewritten.
+    Author: Matt Clarke <psymac@nottingham.ac.uk>
     Date: November 2016
  
     This file is part of the mySTEP Library and is provided
@@ -43,7 +45,7 @@
     BOOL _resolvedAddress;
 }
 
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
 
 - (unsigned short)defaultNameServerPortNumber;
 - (NSPort *)portForName:(NSString *)name;

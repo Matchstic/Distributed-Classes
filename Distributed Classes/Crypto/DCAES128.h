@@ -12,6 +12,9 @@
 #include <stdio.h>
 #import "DCNSCrypto.h"
 
+/**
+ Applies AES-128 to input data. Note that GCM is not utilised here, due to the underlying implementation of AEs-128 utilised from CommonCrypto.
+ */
 @interface DCAES128 : NSObject <DCNSCrypto> 
 
 @end

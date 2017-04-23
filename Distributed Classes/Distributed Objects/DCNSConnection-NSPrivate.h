@@ -22,8 +22,21 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Private methods to handle caching of remote/local proxies
 
-- (DCNSDistantObject *) _getLocal:(id) target;	// check if we know a wrapper for this target
-- (DCNSDistantObject *) _getLocalByRemote:(id) remote;	// get distant object for this (local) reference number
+/**
+ Retrieves the proxy object that maps to the given local object
+ @param target The target to retrieve the proxy for
+ @return The proxy object mapping to the target
+ */
+- (DCNSDistantObject *)_getLocal:(id)target;
+
+/**
+ Retrieves the local proxy object that maps to the given remote ID.
+ @param remote The target to retrieve the remote for. Note: this is actually an unsigned int acting as a reference number.
+ @return The local proxy object mapping to the remote
+ */
+- (DCNSDistantObject *)_getLocalByRemote:(id)remote;
+
+// Not documented.
 - (void) _addLocalDistantObject:(DCNSDistantObject *) obj forLocal:(id) target andRemote:(id) remote;
 - (void) _removeLocalDistantObjectForLocal:(id) target andRemote:(id) remote;
 - (DCNSDistantObject *) _getRemote:(id) target;	// get distant object for this (remote) reference number

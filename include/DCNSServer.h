@@ -21,10 +21,12 @@
 /**
  * This class provides the API necessary to initialise the library in a server process.
  *
- * Some additional configuration is provided here, such as an adjustable timeout for transmission 
+ * Some additional configuration is provided here, such as an adjustable timeout for transmission
  * of messages to a client.
  */
 @interface DCNSServer : NSObject
+
+/** @name Lifecycle */
 
 /**
  Initialises the server-side of Distributed Classes to recieve connections over the local network.
@@ -54,6 +56,7 @@
 +(void)shutdownServer;
 
 #pragma mark Configuration
+/** @name Configuration */
 
 /**
  Configures the timeout when transmitting data to the remote end.
@@ -61,5 +64,12 @@
  @discussion The default timeout is 5 seconds.
  */
 +(void)setTransmissionTimeout:(NSTimeInterval)timeout;
+
+/**
+ Configures the global error handler for when communication or transmission errors occur.<br />
+ See https://github.com/Matchstic/Distributed-Classes/wiki/API:-Options:-Error-Handling for more information.
+ @param handler The new global handler block.
+ */
++(void)setGlobalErrorHandler:(BOOL (^)(DCNSAbstractError *error))handler;
 
 @end

@@ -27,7 +27,7 @@
 
 @interface DCNSConnection (NSUndocumented)
 
-// these methods exist in Cocoa but are not documented
+// These methods exist in Cocoa, but are not documented.
 
 + (DCNSConnection *) lookUpConnectionWithReceivePort:(NSPort *) receivePort sendPort:(NSPort *) sendPort;
 - (void) _portInvalidated:(NSNotification *) n;

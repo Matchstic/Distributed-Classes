@@ -276,7 +276,7 @@ static Class _doClass;
     [coder decodeValueOfObjCType:@encode(char) at:&flag1];
 
 #if DEBUG_LOG_LEVEL>=2
-    NSLog(@"DCNSDistantObject %p initWithCoder -> ref=%p flag1=%d flag2=%d", self, _remote, flag1, flag2);
+    NSLog(@"DCNSDistantObject %p initWithCoder -> ref=%u flag1=%d flag2=%d", self, _remote, flag1, flag2);
 #endif
     
     if (flag1) {
@@ -285,7 +285,7 @@ static Class _doClass;
         [coder decodeValueOfObjCType:@encode(char) at:&flag2];
         
 #if DEBUG_LOG_LEVEL>=2
-        NSLog(@"DCNSDistantObject %p initWithCoder -> ref=%p flag1=%d flag2=%d", self, _remote, flag1, flag2);
+        NSLog(@"DCNSDistantObject %p initWithCoder -> ref=%u flag1=%d flag2=%d", self, _remote, flag1, flag2);
 #endif
         
         if(_remote == 0) {
@@ -333,7 +333,7 @@ static Class _doClass;
 
 - (void)dealloc {
 #if DEBUG_LOG_LEVEL>=2
-    NSLog(@"DCNSDistantObject %p dealloc local=%p remote=%p", self, _local, _remote);
+    NSLog(@"DCNSDistantObject %p dealloc local=%p remote=%u", self, _local, _remote);
 #endif
     
     if(_local) {

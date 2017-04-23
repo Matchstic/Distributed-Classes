@@ -36,7 +36,6 @@
 		C92AD1541E72EC0F0092FB38 /* DCNSPortNameServer.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD12D1E72EC0F0092FB38 /* DCNSPortNameServer.h */; };
 		C92AD1551E72EC0F0092FB38 /* DCNSPortNameServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD12E1E72EC0F0092FB38 /* DCNSPortNameServer.m */; };
 		C92AD1561E72EC0F0092FB38 /* DCNSPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD12F1E72EC0F0092FB38 /* DCNSPrivate.h */; };
-		C92AD1571E72EC0F0092FB38 /* DCNSRaise.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1301E72EC0F0092FB38 /* DCNSRaise.h */; };
 		C92AD1581E72EC0F0092FB38 /* DCNSSocketPort.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1311E72EC0F0092FB38 /* DCNSSocketPort.h */; };
 		C92AD1591E72EC0F0092FB38 /* DCNSSocketPort.m in Sources */ = {isa = PBXBuildFile; fileRef = C92AD1321E72EC0F0092FB38 /* DCNSSocketPort.m */; };
 		C92AD15F1E72EC0F0092FB38 /* ClassRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = C92AD1391E72EC0F0092FB38 /* ClassRepresentation.h */; };
@@ -169,7 +168,6 @@
 		C92AD12D1E72EC0F0092FB38 /* DCNSPortNameServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSPortNameServer.h; sourceTree = "<group>"; };
 		C92AD12E1E72EC0F0092FB38 /* DCNSPortNameServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSPortNameServer.m; sourceTree = "<group>"; };
 		C92AD12F1E72EC0F0092FB38 /* DCNSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCNSPrivate.h; path = "Distributed Objects/DCNSPrivate.h"; sourceTree = "<group>"; };
-		C92AD1301E72EC0F0092FB38 /* DCNSRaise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCNSRaise.h; path = ../DCNSRaise.h; sourceTree = "<group>"; };
 		C92AD1311E72EC0F0092FB38 /* DCNSSocketPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNSSocketPort.h; sourceTree = "<group>"; };
 		C92AD1321E72EC0F0092FB38 /* DCNSSocketPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSSocketPort.m; sourceTree = "<group>"; };
 		C92AD1391E72EC0F0092FB38 /* ClassRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassRepresentation.h; sourceTree = "<group>"; };
@@ -193,6 +191,10 @@
 		C963D1B61E817DA40085BFAA /* DCNSDistantObjectRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNSDistantObjectRequest.m; sourceTree = "<group>"; };
 		C9825BB31E8938A100027655 /* poly1305-donna.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "poly1305-donna.c"; sourceTree = "<group>"; };
 		C9825BB41E8938A100027655 /* poly1305-donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "poly1305-donna.h"; sourceTree = "<group>"; };
+		C98FC0EF1EAD19C9002B940B /* DCNSBasicAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSBasicAuthentication.h; sourceTree = "<group>"; };
+		C98FC0F01EAD19C9002B940B /* DCNSClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSClient.h; sourceTree = "<group>"; };
+		C98FC0F11EAD19C9002B940B /* DCNSConnection-Delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCNSConnection-Delegate.h"; sourceTree = "<group>"; };
+		C98FC0F21EAD19C9002B940B /* DCNSServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSServer.h; sourceTree = "<group>"; };
 		C9A1ECA41E805EB60085F17D /* DCNSAbstractError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCNSAbstractError.h; path = "Error Handling/DCNSAbstractError.h"; sourceTree = "<group>"; };
 		C9A1ECA51E805EB60085F17D /* DCNSAbstractError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCNSAbstractError.m; path = "Error Handling/DCNSAbstractError.m"; sourceTree = "<group>"; };
 		C9A3DE2D1E858B1A005E49DF /* DCAES128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAES128.h; sourceTree = "<group>"; };
@@ -209,12 +211,8 @@
 		C9A3DE4F1E859231005E49DF /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		C9A3DE501E859231005E49DF /* sha256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256.c; sourceTree = "<group>"; };
 		C9A3DE511E859231005E49DF /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha256.h; sourceTree = "<group>"; };
-		C9AB77FD1EAA52D700DE8C4B /* DCNSClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSClient.h; sourceTree = "<group>"; };
 		C9AB77FE1EAA52D700DE8C4B /* DCNSAbstractError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSAbstractError.h; sourceTree = "<group>"; };
 		C9AB77FF1EAA52D700DE8C4B /* DistributedClasses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistributedClasses.h; sourceTree = "<group>"; };
-		C9AB78011EAA52D700DE8C4B /* DCNSBasicAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSBasicAuthentication.h; sourceTree = "<group>"; };
-		C9AB78021EAA52D700DE8C4B /* DCNSConnection-Delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCNSConnection-Delegate.h"; sourceTree = "<group>"; };
-		C9AB78041EAA52D700DE8C4B /* DCNSServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCNSServer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,7 +344,6 @@
 		C963D1BA1E8186F20085BFAA /* Compatibility Headers */ = {
 			isa = PBXGroup;
 			children = (
-				C92AD1301E72EC0F0092FB38 /* DCNSRaise.h */,
 				C955F7DB1EA7D6DF00B9A87A /* DCNSHashTable.h */,
 				C955F7DC1EA7D6DF00B9A87A /* DCNSHost.h */,
 				C955F7DD1EA7D6DF00B9A87A /* DCNSMapTable.h */,
@@ -461,39 +458,15 @@
 		C9AB77FB1EAA52D700DE8C4B /* include */ = {
 			isa = PBXGroup;
 			children = (
-				C9AB77FC1EAA52D700DE8C4B /* Client */,
+				C98FC0EF1EAD19C9002B940B /* DCNSBasicAuthentication.h */,
+				C98FC0F01EAD19C9002B940B /* DCNSClient.h */,
+				C98FC0F11EAD19C9002B940B /* DCNSConnection-Delegate.h */,
+				C98FC0F21EAD19C9002B940B /* DCNSServer.h */,
 				C9AB77FE1EAA52D700DE8C4B /* DCNSAbstractError.h */,
 				C9AB77FF1EAA52D700DE8C4B /* DistributedClasses.h */,
-				C9AB78001EAA52D700DE8C4B /* Security */,
-				C9AB78031EAA52D700DE8C4B /* Server */,
 			);
 			path = include;
 			sourceTree = SOURCE_ROOT;
-		};
-		C9AB77FC1EAA52D700DE8C4B /* Client */ = {
-			isa = PBXGroup;
-			children = (
-				C9AB77FD1EAA52D700DE8C4B /* DCNSClient.h */,
-			);
-			path = Client;
-			sourceTree = "<group>";
-		};
-		C9AB78001EAA52D700DE8C4B /* Security */ = {
-			isa = PBXGroup;
-			children = (
-				C9AB78011EAA52D700DE8C4B /* DCNSBasicAuthentication.h */,
-				C9AB78021EAA52D700DE8C4B /* DCNSConnection-Delegate.h */,
-			);
-			path = Security;
-			sourceTree = "<group>";
-		};
-		C9AB78031EAA52D700DE8C4B /* Server */ = {
-			isa = PBXGroup;
-			children = (
-				C9AB78041EAA52D700DE8C4B /* DCNSServer.h */,
-			);
-			path = Server;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -515,7 +488,6 @@
 				C9192CD71E8436B80057A7AB /* DCNSCrypto.h in Headers */,
 				C92AD1491E72EC0F0092FB38 /* DCNSConnection-NSPrivate.h in Headers */,
 				C9825BBF1E8938A100027655 /* poly1305-donna.h in Headers */,
-				C92AD1571E72EC0F0092FB38 /* DCNSRaise.h in Headers */,
 				C92AD1511E72EC0F0092FB38 /* DCNSDistantObjectRequest.h in Headers */,
 				C92AD14D1E72EC0F0092FB38 /* DCNSDiffieHellmanUtility.h in Headers */,
 				C9A3DE331E858B1A005E49DF /* DCAES128.h in Headers */,
