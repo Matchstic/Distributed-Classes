@@ -57,11 +57,6 @@
     return method_copyArgumentType(_original, index);
 }
 
-/*
--(struct objc_method_description)getDescription {
-    return *method_getDescription(_original);
-}*/
-
 -(char*)getReturnType {
     return method_copyReturnType(_original);
 }

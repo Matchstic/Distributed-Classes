@@ -37,7 +37,13 @@
     return _className;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Forward "class" methods through to the stored class
+
+/*
+ * Quite frankly, this is where a lot of the magic will happen. This wrapper class will recieve a message from
+ * the remote process, which will then be forwarded on to the actual Class being wrapped. 
+ */
 
 -(NSMethodSignature*)methodSignatureForSelector:(SEL)aSelector {
     NSMethodSignature *sig = [super methodSignatureForSelector:aSelector];
