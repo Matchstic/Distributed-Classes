@@ -50,11 +50,23 @@
 
 <p>In a nutshell, provided you know the name of a class in one process, you can access it in another after setting up a connection between the two.</p>
 
-<p>This library explores the technique of proxying class defintions, rather than instances of a class.</p>
+<p>This library explores the technique of proxying class definitions, rather than instances of a class.</p>
 
 <h1>Features</h1>
 
-<p>// TODO</p>
+<p>This library has the following features:</p>
+
+<ul>
+<li>Access to remote classes with only a slight syntax change (to avoid compiler complaints).</li>
+<li>Automatic discovery of processes providing classes on the local network via Bonjour.</li>
+<li>One-time connection, with no other code needed for a basic setup.</li>
+<li>Support for connecting to a given IPv6 hostname and port number (see limitations for IPv4).</li>
+<li>Optional global error handler, to avoid the need for adding code to catch potential transmission errors.</li>
+<li>Optional user-provided security, with a default of encrypting messages with ChaCha20+Poly1305.</li>
+</ul>
+
+
+<p>You can also adjust the debug logging level of the system at compile-time, by changing the <code>DEBUG_LOG_LEVEL</code> value in <code>DCNSPrivate.h</code>.</p>
 
 <h1>Installation</h1>
 
@@ -83,7 +95,7 @@
 
 <p>With the main difference being the usage of <code>$c()</code>.</p>
 
-<p>Note that the following is for communication between processes on the <strong>same machine</strong>, which is only possible on macOS due to sandboxing on other platforms. The API is almost identical for communication inter-machine.</p>
+<p>Note that the following is for communication between processes on the <strong>same machine</strong>, which is only possible on macOS due to sandboxing on other platforms. The API is almost identical for communication inter-machine, and can be found in the <a href="https://github.com/Matchstic/Distributed-Classes/wiki/API:-Init:-Inter-Machine">Wiki</a>.</p>
 
 <p>To initialise the library in the <strong>client process</strong>, call:</p>
 

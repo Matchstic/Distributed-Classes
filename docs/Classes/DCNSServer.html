@@ -61,6 +61,8 @@
 		
 		<option value="//api/name/initialiseAsRemoteWithService:portNumber:authenticationDelegate:andError:">+ initialiseAsRemoteWithService:portNumber:authenticationDelegate:andError:</option>
 		
+		<option value="//api/name/setGlobalErrorHandler:">+ setGlobalErrorHandler:</option>
+		
 		<option value="//api/name/setTransmissionTimeout:">+ setTransmissionTimeout:</option>
 		
 		<option value="//api/name/shutdownServer">+ shutdownServer</option>
@@ -321,6 +323,58 @@ of messages to a client.</p>
 					<tr>
 						<th scope="row" class="argument-name"><code>timeout</code></th>
 						<td><p>New timeout value in seconds.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">DCNSServer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setGlobalErrorHandler:" title="setGlobalErrorHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setGlobalErrorHandler:">+&nbsp;setGlobalErrorHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Configures the global error handler for when communication or transmission errors occur.<br />
+See <a href="https://github.com/Matchstic/Distributed-Classes/wiki/API:-Options:-Error-Handling">https://github.com/Matchstic/Distributed-Classes/wiki/API:-Options:-Error-Handling</a> for more information.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setGlobalErrorHandler:(BOOL ( ^ ) ( DCNSAbstractError *error ))<em>handler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>handler</code></th>
+						<td><p>The new global handler block.</p></td>
 					</tr>
 				
 				</table>
