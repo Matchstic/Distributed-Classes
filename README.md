@@ -5,12 +5,21 @@ Distributed Classes builds upon Distributed Objects to transparently allow multi
 
 In a nutshell, provided you know the name of a class in one process, you can access it in another after setting up a connection between the two.
 
-This library explores the technique of proxying class defintions, rather than instances of a class.
+This library explores the technique of proxying class definitions, rather than instances of a class.
 
 Features
 ===================
 
-// TODO
+This library has the following features:
+
+- Access to remote classes with only a slight syntax change (to avoid compiler complaints).
+- Automatic discovery of processes providing classes via Bonjour on the local network.
+- One-time connection, with no other code needed for a basic setup.
+- Support for connecting to a given IPv6 hostname and port number (see limitations for IPv4).
+- Optional global error handler, to avoid the need for adding code to catch potential transmission errors.
+- Optional user-provided security, with a default of encrypting messages with ChaCha20+Poly1305.
+
+You can also adjust the debug logging level of the system at compile-time, by changing the ```DEBUG_LOG_LEVEL``` value in ```DCNSPrivate.h```.
 
 Installation
 ===================

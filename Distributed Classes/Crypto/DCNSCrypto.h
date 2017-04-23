@@ -28,7 +28,7 @@
  This method will be called when data is to be decrypted.
  @discussion Both the main body of the message AND the authentication data provided by your delegate will be subject to encryption here. It is recommended to do any message integrity checks here, such as a MAC.
  @param data The ciphertext to decrypt
- @param The current 256-bit session key
+ @param secret The current 256-bit session key
  @return Decrypted data
  */
 - (NSData*)decryptData:(NSData *)data withSecret:(const char*)secret;

@@ -14,12 +14,12 @@
 @class NSString;
 
 /**
- * DCNSAbstractError encapuslates data about an error to be passed into the global error
- * handler block. This includes the method name and class it occured in, along with
- * any other pertinent information.
- *
- * Future updates will see subclasses of this class given to the error handler instead,
- * which will be specific to error types; i.e. timeouts, encoding issues etc.
+ DCNSAbstractError encapuslates data about an error to be passed into the global error
+ handler block. This includes the method name and class it occured in, along with
+ any other pertinent information.
+ 
+ Future updates will see subclasses of this class given to the error handler instead,
+ which will be specific to error types; i.e. timeouts, encoding issues etc.
  */
 @interface DCNSAbstractError : NSObject {
     NSString *_calleeClass;
