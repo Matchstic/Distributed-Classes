@@ -10,6 +10,7 @@
 #import "DCNSPortNameServer.h"
 #import "VendedObject.h"
 #import "ServerRegistration.h"
+#import "DCNSBasicAuthentication.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Initialisation functions
@@ -26,6 +27,11 @@ int dcns_server_common(NSString *service, NSPortNameServer *server, int portNumb
     
     if (delegate) {
         [dcServer setDelegate:delegate];
+    } else {
+        DCNSBasicAuthentication *auth = [DCNSBasicAuthentication createAuthenticationModuleWithTransportEncryptionOnly:kDCNSBasicEncryptionChaCha];
+        auth.useMessageAuthentication = YES;
+        
+        [dcServer setDelegate:auth];
     }
     
     int registerServer = [dcServer registerName:service withNameServer:server portNumber:portNumber];

@@ -23,6 +23,7 @@
 #import "DCNSConnection.h"
 #import "DCNSDistantObject.h"
 #import "DCNSPortNameServer.h"
+#import "DCNSBasicAuthentication.h"
 #include <objc/message.h>
 #include "fishhook.h"
 
@@ -309,9 +310,14 @@ int dcns_common_configure(DCNSConnection *connection, id<DCNSConnectionDelegate>
         return -2;
     }
     
-    // Set security delegate if available.
+    // Set security delegate.
     if (delegate) {
         [connection setDelegate:delegate];
+    } else {
+        DCNSBasicAuthentication *auth = [DCNSBasicAuthentication createAuthenticationModuleWithTransportEncryptionOnly:kDCNSBasicEncryptionChaCha];
+        auth.useMessageAuthentication = YES;
+        
+        [connection setDelegate:auth];
     }
     
     remoteProxy = (VendedObject*)[connection rootProxy];

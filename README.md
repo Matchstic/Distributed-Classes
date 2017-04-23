@@ -13,7 +13,7 @@ Features
 This library has the following features:
 
 - Access to remote classes with only a slight syntax change (to avoid compiler complaints).
-- Automatic discovery of processes providing classes via Bonjour on the local network.
+- Automatic discovery of processes providing classes on the local network via Bonjour.
 - One-time connection, with no other code needed for a basic setup.
 - Support for connecting to a given IPv6 hostname and port number (see limitations for IPv4).
 - Optional global error handler, to avoid the need for adding code to catch potential transmission errors.
