@@ -38,7 +38,7 @@
  @discussion IPv4 is a ridiculous nightmare; specify `host` via an IPv6 address if going for dotted notation. In addition, my code will only attempt to resolve an IPv6 address for unknown hosts.
  @param host The hostname of the server to connect to. Passing nil searches for `service` via Bonjour in the local domain.
  @param portNum The port number the remote server is listening on. Only used if `host` is non-NULL.
- @param delegate The delegate to use for authentication requests. Passing `nil` will run the system without any authentication.
+ @param delegate The delegate to use for authentication requests. Passing `nil` will run the system with default authentication.
  @param error Will contain any errors that arise during establishing a connection
  */
 +(void)initialiseToRemoteWithHostname:(NSString*)host portNumber:(unsigned int)portNum authenticationDelegate:(id<DCNSConnectionDelegate>)delegate andError:(NSError * __autoreleasing *)error;
@@ -47,7 +47,7 @@
  Initialises the client-side of Distributed Classes to a local network server that broadcasts its location via mDNS.
  @discussion If you wish to connect to a device on the local network, it may be easier to simply pass nil and 0 for `host` and `portNum` respectively. This allows Bonjour to automatically find the service requested via multicast DNS.
  @param service The unique name of the service to connect to.
- @param delegate The delegate to use for authentication requests. Passing `nil` will run the system without any authentication.
+ @param delegate The delegate to use for authentication requests. Passing `nil` will run the system with default authentication.
  @param error Will contain any errors that arise during establishing a connection
  */
 +(void)initialiseToRemoteWithService:(NSString*)service authenticationDelegate:(id<DCNSConnectionDelegate>)delegate andError:(NSError * __autoreleasing *)error;
@@ -57,7 +57,7 @@
 /**
  Initialises the client-side of Distributed Classes to a process on the same machine.
  @param service The unique name of the service to connect to.
- @param delegate The delegate to use for authentication requests. Passing `nil` will run the system without any authentication.
+ @param delegate The delegate to use for authentication requests. Passing `nil` will run the system with default authentication.
  @param error Will contain any errors that arise during establishing a connection
  @warning This API is not available on iOS and tvOS, due to sandboxing.
  */

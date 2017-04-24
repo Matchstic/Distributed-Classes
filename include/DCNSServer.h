@@ -33,7 +33,7 @@
  @discussion If network configuration allows, the server can be connected to from remote networks. This will require the use of a specific port number to be passed here.
  @param service The unique name of the service broadcast by this server over mDNS. This @b cannot be nil.
  @param portNum The port number to listen on. Passing 0 will automatically use any available port.
- @param delegate The delegate to use for authentication requests. Passing `nil` will run the system without any authentication.
+ @param delegate The delegate to use for authentication requests. Passing `nil` will run the system with default authentication.
  @param error Will contain any errors that arise during establishing the server.
  @warning If providing a port number, note that the normal security restrictions to requesting port numbers are enforced by the kernel.
  */
@@ -44,7 +44,7 @@
 /**
  Initialises the server-side of Distributed Classes to recieve connections from only localhost.
  @param service The unique name of the service to broadcast as.
- @param delegate The delegate to use for authentication requests. Passing `nil` will run the system without any authentication.
+ @param delegate The delegate to use for authentication requests. Passing `nil` will run the system with default authentication.
  @param error Will contain any errors that arise during establishing the server.
  */
 +(void)initialiseAsLocalWithService:(NSString*)service authenticationDelegate:(id<DCNSConnectionDelegate>)delegate andError:(NSError * __autoreleasing *)error;
