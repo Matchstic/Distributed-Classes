@@ -7,7 +7,7 @@ In a nutshell, provided you know the name of a class in one process, you can acc
 
 This library explores the technique of proxying class definitions, rather than instances of a class.
 
-API reference for public header can be found [here](http://incendo.ws/projects/Distributed-Classes/), with all documentation on usage found in the [Wiki](https://github.com/Matchstic/Distributed-Classes/wiki/).
+The API reference for public headers can be found [here](http://incendo.ws/projects/Distributed-Classes/), with all documentation on usage found in the [Wiki](https://github.com/Matchstic/Distributed-Classes/wiki/).
 
 Features
 ===================
