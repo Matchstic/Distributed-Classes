@@ -99,6 +99,7 @@ static NSMapTable *distantObjectsByRef;
 
 static Class _doClass;
 
+NSString *const DCNSMethodSignatureException = @"DCNSMethodSignatureException";
 
 @implementation DCNSDistantObject
 
@@ -455,7 +456,7 @@ static Class _doClass;
         // ask local object for its signature
         ret = [_local methodSignatureForSelector:aSelector];
         if (!ret)
-            [NSException raise:NSInternalInconsistencyException format:@"local object does not define @selector(%@): %@", NSStringFromSelector(aSelector), _local];
+            [NSException raise:DCNSMethodSignatureException format:@"local object does not define @selector(%@): %@", NSStringFromSelector(aSelector), _local];
     } else if (_protocol) {
         // Ask protocol
         
@@ -466,7 +467,7 @@ static Class _doClass;
         struct objc_method_description desc = protocol_getMethodDescription(_protocol, aSelector, YES, YES);
         
         if (desc.name == NULL) {
-            [NSException raise:NSInternalInconsistencyException format:@"@protocol %s does not define @selector(%@)", protocol_getName(_protocol), NSStringFromSelector(aSelector)];
+            [NSException raise:DCNSMethodSignatureException format:@"@protocol %s does not define @selector(%@)", protocol_getName(_protocol), NSStringFromSelector(aSelector)];
         } else {
             return [NSMethodSignature signatureWithObjCTypes:desc.types];
         }
@@ -493,7 +494,7 @@ static Class _doClass;
 #endif
         
         if (!md) {
-            NSException *e = [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"Peer does not know a signature for selector: @selector(%@)", NSStringFromSelector(aSelector)] userInfo:nil];
+            NSException *e = [NSException exceptionWithName:DCNSMethodSignatureException reason:[NSString stringWithFormat:@"Peer does not know a signature for selector: @selector(%@)", NSStringFromSelector(aSelector)] userInfo:nil];
             
             // Notify the global hander as a courtesy.
             [_connection _handleExceptionIfPossible:e andRaise:NO];
@@ -554,7 +555,7 @@ static Class _doClass;
      */
     
     NSString *reason = [NSString stringWithFormat:@"Peer doesn't respond to @selector(%@)", NSStringFromSelector(aSelector)];
-    NSException *e = [NSException exceptionWithName:NSInternalInconsistencyException reason:reason userInfo:nil];
+    NSException *e = [NSException exceptionWithName:DCNSMethodSignatureException reason:reason userInfo:nil];
     
     @throw e;
 }

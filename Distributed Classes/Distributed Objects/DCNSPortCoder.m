@@ -195,6 +195,9 @@ const char *objc_skip_typespec(const char *type) {
 - (id) _initWithPortCoder:(NSCoder *) coder;
 @end
 
+NSString *const DCNSTransmissionException = @"DCNSTransmissionException";
+NSString *const DCNSPortCoderException = @"DCNSPortCoderException";
+
 @implementation DCNSPortCoder
 
 + (DCNSPortCoder *)portCoderWithReceivePort:(NSPort *)recv sendPort:(NSPort *)send components:(NSArray *)cmp {
@@ -220,7 +223,7 @@ const char *objc_skip_typespec(const char *type) {
     [pm release];
     
     if (!r)
-        [NSException raise:NSPortTimeoutException format:@"Could not send request (within %.0lf seconds)", time];
+        [NSException raise:DCNSTransmissionException format:@"Could not send request (within %.0lf seconds)", time];
 }
 
 - (void)dispatch {
@@ -328,7 +331,7 @@ const char *objc_skip_typespec(const char *type) {
 - (void)encodePortObject:(NSPort *)port {
     // psymac :: Check to ensure that we are actually trying to encode a port object.
     if (![port isKindOfClass:[NSPort class]]) {
-        [NSException raise:NSInvalidArgumentException format:@"DCNSPortCoder: -encodePortObject: NSPort expected, got %@", port];
+        [NSException raise:DCNSPortCoderException format:@"DCNSPortCoder: -encodePortObject: NSPort expected, got %@", port];
     }
     
     [(NSMutableArray *) _components addObject:port];
@@ -629,7 +632,7 @@ const char *objc_skip_typespec(const char *type) {
         case _C_UNION_B:
         default:
             NSLog(@"DCNSPortCoder: can't encodeValueOfObjCType:%s", type);
-            [NSException raise:NSPortReceiveException format:@"DCNSPortCoder: can't encodeValueOfObjCType:%s", type];
+            [NSException raise:DCNSPortCoderException format:@"DCNSPortCoder: can't encodeValueOfObjCType:%s", type];
         }
     }
 }
@@ -656,7 +659,7 @@ const char *objc_skip_typespec(const char *type) {
     int len;
     
     if (_pointer >= _eod)
-        [NSException raise:NSPortReceiveException format:@"no more data to decode (%@)", [self _location]];
+        [NSException raise:DCNSPortCoderException format:@"no more data to decode (%@)", [self _location]];
     
     len = *_pointer++;
     if (len < 0) {
@@ -669,10 +672,10 @@ const char *objc_skip_typespec(const char *type) {
     
     // 8 bits to an integer.
     if (len > 8)
-        [NSException raise:NSPortReceiveException format:@"invalid integer length (%d) to decode (%@)", len, [self _location]];
+        [NSException raise:DCNSPortCoderException format:@"invalid integer length (%d) to decode (%@)", len, [self _location]];
     
     if(_pointer+len > _eod)
-        [NSException raise:NSPortReceiveException format:@"not enough data to decode integer with length %d (%@)", len, [self _location]];
+        [NSException raise:DCNSPortCoderException format:@"not enough data to decode integer with length %d (%@)", len, [self _location]];
     
     memcpy(d.data, _pointer, len);
     
@@ -689,7 +692,7 @@ const char *objc_skip_typespec(const char *type) {
     
     if (size == 1) {
         if (_pointer+count >= _eod)
-            [NSException raise:NSPortReceiveException format:@"not enough data to decode byte array"];
+            [NSException raise:DCNSPortCoderException format:@"not enough data to decode byte array"];
         
         memcpy(array, _pointer, count);
         _pointer += count;
@@ -721,7 +724,7 @@ const char *objc_skip_typespec(const char *type) {
     NSData *d;
     
     if(_pointer+len > _eod)
-        [NSException raise:NSPortReceiveException format:@"not enough data to decode data (length=%lul): %@", len, [self _location]];
+        [NSException raise:DCNSPortCoderException format:@"not enough data to decode data (length=%lul): %@", len, [self _location]];
     
     // retained copy...
     d = [NSData dataWithBytes:_pointer length:len];
@@ -803,7 +806,7 @@ const char *objc_skip_typespec(const char *type) {
         case _C_CHR:
         case _C_UCHR: {
             if(_pointer >= _eod)
-                [NSException raise:NSPortReceiveException format:@"not enough data to decode char: %@", [self _location]];
+                [NSException raise:DCNSPortCoderException format:@"not enough data to decode char: %@", [self _location]];
             
             *((char *) address) = *_pointer++;	// single byte
             break;
@@ -832,10 +835,10 @@ const char *objc_skip_typespec(const char *type) {
             NSSwappedFloat val;
             
             if (_pointer+sizeof(float) >= _eod)
-                [NSException raise:NSPortReceiveException format:@"not enough data to decode float"];
+                [NSException raise:DCNSPortCoderException format:@"not enough data to decode float"];
             
             if (*_pointer != sizeof(float))
-                [NSException raise:NSPortReceiveException format:@"invalid length to decode float"];
+                [NSException raise:DCNSPortCoderException format:@"invalid length to decode float"];
             
             memcpy(&val, ++_pointer, sizeof(float));
             
@@ -848,10 +851,10 @@ const char *objc_skip_typespec(const char *type) {
             NSSwappedDouble val;
             
             if (_pointer+sizeof(double) >= _eod)
-                [NSException raise:NSPortReceiveException format:@"not enough data to decode double"];
+                [NSException raise:DCNSPortCoderException format:@"not enough data to decode double"];
             
             if (*_pointer != sizeof(double))
-                [NSException raise:NSPortReceiveException format:@"invalid length to decode double"];
+                [NSException raise:DCNSPortCoderException format:@"invalid length to decode double"];
             
             memcpy(&val, ++_pointer, sizeof(double));
             
@@ -941,7 +944,7 @@ const char *objc_skip_typespec(const char *type) {
         case _C_UNION_B:
         default:
             NSLog(@"DCNSPortCoder: -decodeValueOfObjCType: can't decodeValueOfObjCType:%s", type);
-            [NSException raise:NSPortReceiveException format:@"can't decodeValueOfObjCType:%s", type];
+            [NSException raise:DCNSPortCoderException format:@"can't decodeValueOfObjCType:%s", type];
     }
 }
 
@@ -1183,7 +1186,7 @@ const char *objc_skip_typespec(const char *type) {
     
     if (!class) {
         // CHECKME: Class is nil so we can't convert it back into a NSString...
-        [NSException raise:@"DCNSPortCoderException" format:@"Cannot decode class, as it is nil."];
+        [NSException raise:DCNSPortCoderException format:@"Cannot decode class, as it is nil."];
         return nil; // psymac :: Is this reached?
     }
     
@@ -1241,7 +1244,7 @@ const char *objc_skip_typespec(const char *type) {
     _classVersions = savedClassVersions;
     
     if (!obj)
-        [NSException raise:@"DCNSPortCoderException" format:@"decodeRetainedObject: class %@ not instantiated %@", NSStringFromClass(class), [self _location]];
+        [NSException raise:DCNSPortCoderException format:@"decodeRetainedObject: class %@ not instantiated %@", NSStringFromClass(class), [self _location]];
 
     return obj;
 }
@@ -1549,7 +1552,7 @@ const char *objc_skip_typespec(const char *type) {
     unsigned int len;
     
     if([coder versionForClassName:@"NSString"] != 1)
-        [NSException raise:NSInvalidArgumentException format:@"Can't decode version %ld of NSString", (long)[coder versionForClassName:@"NSString"]];
+        [NSException raise:DCNSPortCoderException format:@"Can't decode version %ld of NSString", (long)[coder versionForClassName:@"NSString"]];
     
     [coder decodeValueOfObjCType:@encode(unsigned int) at:&len];
 

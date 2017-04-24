@@ -948,9 +948,9 @@ static unsigned int _sequence;
 #endif
             
             if (![self isValid])
-                [NSException raise:NSPortReceiveException format:@"Connection became invalid whilst sending data."];
+                [NSException raise:DCNSTransmissionException format:@"Connection became invalid whilst sending data."];
             if (![self.receivePort isValid])
-                [NSException raise:NSPortReceiveException format:@"Receiving port became invalid whilst sending data."];
+                [NSException raise:DCNSTransmissionException format:@"Receiving port became invalid whilst sending data."];
             
             [_DCNSResponsesLock lock];
             portCoder = NSMapGet(_responses, INT2VOIDP(currentSequence));

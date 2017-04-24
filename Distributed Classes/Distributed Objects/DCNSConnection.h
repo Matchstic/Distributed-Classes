@@ -61,6 +61,7 @@ extern NSString *const DCNSConnectionDidDieNotification;
 extern NSString *const DCNSConnectionDidInitializeNotification;
 extern NSString *const DCNSFailedAuthenticationException;
 extern NSString *const DCNSInvalidPortNameServerException;
+extern NSString *const DCNSTransmissionException;
 
 @interface DCNSConnection : NSObject <NSPortDelegate> {
 	id _rootObject;						// the root object to vend
